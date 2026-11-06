@@ -57,6 +57,6 @@ for name, keys in tables.items():
             differences += int((~same).sum())
         report.append(dict(run=run, table=name, rows=len(a), differences=differences, max_float_difference=maximum))
         print(run, name, len(a), differences, maximum, flush=True)
-out = project / 'experiencias/resultados' / args.report
+out = project / 'experiências docker/resultados' / args.report
 out.write_text(json.dumps(report, indent=2), encoding='utf-8')
 assert all(item['differences'] == 0 for item in report), 'Resultados diferentes'

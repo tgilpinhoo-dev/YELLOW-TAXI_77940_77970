@@ -204,7 +204,7 @@ do sistema operativo pode persistir entre aplicações e não é a cache do Spar
 O teste de funcionamento com `--fraction 0.01` não é a baseline final.
 
 O hardware observado, os limites do Docker e os IDs das imagens estão em
-`experiencias/resultados/ambiente_escala.json`. As configurações e as medições
+`experiências docker/resultados/ambiente_escala.json`. As configurações e as medições
 estão nos ficheiros de cada corrida e no notebook de experiências.
 Na revisão final da entrega, conferir também as versões das bibliotecas e a
 reprodução do ambiente. A imagem base `spark:python3` segue os Labs, mas a tag
@@ -229,7 +229,7 @@ argumentos e mudar só a opção indicada:
 
 A amostra usa seed 42 depois da união dos ficheiros; continua a ler os 24 meses.
 A comparação de workers usa as mesmas opções da referência com cache e altera
-apenas o número de workers. O runner `experiencias/executar_escala.ps1` documenta
+apenas o número de workers. O runner `experiências docker/executar_escala.ps1` documenta
 as três rondas 1/2/3/6 e repõe três workers no fim. Não o executar por cima de
 resultados existentes. Para alterar manualmente, com as aplicações Spark fechadas:
 
@@ -247,7 +247,7 @@ alinhando chaves e usando tolerância apenas nos valores de ponto flutuante.
 A comparação corre depois das medições e precisa dos Parquet locais:
 
 ```powershell
-docker compose -f compose.project.yml exec -T jupyter python3 /project/experiencias/verificar_resultados.py --prefix baseline_com_cache --reference baseline_sem_cache_01 --report comparacao_cache_reproduzida.json
+docker compose -f compose.project.yml exec -T jupyter python3 "/project/experiências docker/verificar_resultados.py" --prefix baseline_com_cache --reference baseline_sem_cache_01 --report comparacao_cache_reproduzida.json
 ```
 
 Para corridas novas, adaptar os nomes em `--prefix` e `--reference`. Os verificadores
@@ -258,7 +258,7 @@ Copiar apenas os ficheiros pequenos de cada corrida para o diretório de métric
 
 ```powershell
 $runName = "nova_baseline_sem_cache_01"
-$metricsPath = Join-Path "experiencias/resultados" $runName
+$metricsPath = Join-Path "experiências docker/resultados" $runName
 New-Item -ItemType Directory -Force -Path $metricsPath | Out-Null
 foreach ($metricFile in @("run_info.json", "profile_metrics.json", "profile_report.csv", "m1_cleaning_stats.csv")) {
     Copy-Item -LiteralPath (Join-Path "data/experiencias/$runName" $metricFile) -Destination $metricsPath
@@ -271,7 +271,7 @@ selecioná-la nas células correspondentes. É possível consultar as tabelas e 
 sem descarregar os Parquet; repetir os cálculos e validações exige os dados originais.
 
 Os URLs exatos e hashes dos ficheiros usados estão em
-`experiencias/resultados/download_manifest.csv`, copiado do manifesto local.
+`experiências docker/resultados/download_manifest.csv`, copiado do manifesto local.
 O script constrói os URLs mensais oficiais como
 `https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2023-01.parquet`
 (trocar ano e mês), e a tabela de zonas em

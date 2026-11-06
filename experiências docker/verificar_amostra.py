@@ -6,7 +6,7 @@ import pandas as pd
 import pyarrow.dataset as ds
 
 root=Path(__file__).resolve().parents[1]
-results=root/'experiencias/resultados'
+results=root/'experiências docker/resultados'
 source=root/'data/experiencias'
 keys={
     'm1_cleaning_stats.csv':['source_year'],

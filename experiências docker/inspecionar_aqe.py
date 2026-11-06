@@ -18,7 +18,7 @@ args = SimpleNamespace(years=[2023, 2024], no_aqe=False, master=None,
                        driver_memory=None, shuffle_partitions=200)
 spark = pl.build_spark(args)
 spark.sparkContext.setLogLevel('WARN')
-out = project/'experiencias/resultados/planos_aqe'
+out = project/'experiências docker/resultados/planos_aqe'
 out.mkdir(parents=True, exist_ok=True)
 try:
     settings = {name: spark.conf.get(name) for name in [

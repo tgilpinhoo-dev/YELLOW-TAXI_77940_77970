@@ -8,7 +8,7 @@ import pyarrow.dataset as ds
 import pyarrow.parquet as pq
 
 root=Path(__file__).resolve().parents[1]
-output=root/'experiencias/resultados'
+output=root/'experiências docker/resultados'
 cases={
     '2023':([2023],'dimensao_2023_cache'),
     '2023+2024':([2023,2024],'escala_3w_cache'),
