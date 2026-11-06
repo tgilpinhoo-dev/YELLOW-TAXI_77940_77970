@@ -4,10 +4,9 @@ Estado atual: pipeline completo (M1, M2, M3, O1, O2) em `projeto1.py`, com
 validações executadas no Docker a 10% e a 100% dos dados de 2023–2024.
 As experiências controladas de desempenho e escala estão documentadas.
 A comparação de 10% contra 100% também está concluída (secção 13.6 do
-notebook de experiências); a comparação por anos é complementar. A revisão técnica está em
-`experiencias/REVISAO_FINAL.md`. O relatório final está em
-`report/relatorio_projeto1.pdf`, com fontes editáveis no mesmo diretório.
-A conferência da entrega e as limitações estão em `experiencias/REVISAO_ENTREGA.md`.
+notebook de experiências); a comparação por anos é complementar.
+O relatório final em PDF está em `report/relatorio_projeto1.pdf`.
+As limitações metodológicas estão descritas no próprio relatório.
 
 | Módulo | O que faz | Saída (em `--output`) |
 |---|---|---|
