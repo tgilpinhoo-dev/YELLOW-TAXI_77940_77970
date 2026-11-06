@@ -117,11 +117,23 @@ docker compose -f compose.project.yml exec jupyter /opt/spark/bin/spark-submit `
 Para as medições, mudar `--fraction` (0.1, 0.2, 1.0) e `--output` (uma pasta por
 corrida). Cada corrida grava `run_info.json` com a configuração e os tempos.
 
-### Localmente no Windows (opcional, não medido neste trabalho)
+### Localmente no Windows (complemento, Secção 4.5 do relatório)
 
-As medições entregues usam Docker. Uma execução local exige uma instalação
-compatível de Python, PySpark e Java; não foi validada nesta revisão e não é
-necessária para reproduzir os resultados apresentados.
+As medições principais usam Docker. A Secção 4.5 compara a direção dos efeitos
+num segundo PC, sem Docker: Windows 11, 16 threads, `local[*]`, Spark 4.2.0
+(PySpark num venv com Python 3.12), Java 17 e `winutils.exe`/`hadoop.dll` do
+Hadoop 3.4 em `C:\hadoop\bin` (variável `HADOOP_HOME`). Amostra de 10%, uma ou
+duas corridas por configuração. Os `run_info.json` de cada corrida estão em
+`experiencias/resultados_local/`. Estas corridas usaram a versão do
+`projeto1.py` anterior às correções de arredondamento e à medição com o
+profiler; o tempo total é a soma dos blocos medidos.
+
+```powershell
+# referência: cache, broadcast, AQE, O1 por groupBy, 200 partições
+python projeto1.py --data data\raw --fraction 0.1 --master "local[*]" --driver-memory 8g --output data\local\referencia
+# uma opção de cada vez: --no-cache | --no-broadcast | --no-aqe | --o1-method window
+# partições: --shuffle-partitions 8 | 16 | 32 | 64 ; dados completos: --fraction 1.0
+```
 
 ### Argumentos
 
