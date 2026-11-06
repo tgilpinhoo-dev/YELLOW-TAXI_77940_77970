@@ -1,0 +1,24 @@
+# Dados e resultados volumosos.
+data/
+outputs/
+projeto-data/
+projeto-out*/
+*.parquet
+
+# Credenciais locais; partilhar apenas o modelo vazio.
+.env
+.env.*
+!.env.example
+
+# Ficheiros locais de Spark e Python.
+spark-events/
+spark-warehouse/
+metastore_db/
+derby.log
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Não excluir todos os CSV: pequenas métricas podem ser entregáveis.

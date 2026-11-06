@@ -1,0 +1,9 @@
+data
+outputs
+spark-events
+.env
+.git
+.venv
+__pycache__
+*.pdf
+*.zip

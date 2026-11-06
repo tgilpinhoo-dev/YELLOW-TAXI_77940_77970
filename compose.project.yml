@@ -1,0 +1,44 @@
+name: taxi-project
+
+services:
+  spark-master:
+    image: spark:python3
+    command: >
+      /opt/spark/bin/spark-class
+      org.apache.spark.deploy.master.Master
+    ports:
+      - "127.0.0.1:8080:8080"
+      - "127.0.0.1:7077:7077"
+
+  spark-worker:
+    image: taxi-project-python
+    build: .
+    command: >
+      /opt/spark/bin/spark-class
+      org.apache.spark.deploy.worker.Worker
+      spark://spark-master:7077
+      --cores 2
+      --memory 2G
+    depends_on:
+      - spark-master
+    volumes:
+      - .:/project
+
+  jupyter:
+    image: taxi-project-python
+    build: .
+    user: root
+    environment:
+      HOME: /tmp
+      JUPYTER_CONFIG_DIR: /tmp/jupyter
+      JUPYTER_RUNTIME_DIR: /tmp/jupyter/runtime
+      JUPYTER_DATA_DIR: /tmp/jupyter/data
+      JUPYTER_TOKEN: ${JUPYTER_TOKEN:?Definir JUPYTER_TOKEN no .env local}
+    depends_on:
+      - spark-master
+    working_dir: /project
+    ports:
+      - "127.0.0.1:8888:8888"
+      - "127.0.0.1:4040-4050:4040-4050"
+    volumes:
+      - .:/project
