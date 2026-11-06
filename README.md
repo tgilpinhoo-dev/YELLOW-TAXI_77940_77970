@@ -7,7 +7,7 @@ A comparação de 10% contra 100% também está concluída (secção 13.6 do
 notebook de experiências); a comparação por anos é complementar.
 O relatório foi elaborado em LaTeX no Overleaf, seguindo o modelo fornecido.
 Neste repositório disponibilizamos apenas a versão final em PDF, em
-`report/relatorio_projeto1.pdf`.
+[relatório_projeto 1.pdf](<relatório_projeto 1.pdf>).
 As limitações metodológicas estão descritas no próprio relatório.
 
 | Módulo | O que faz | Saída (em `--output`) |
