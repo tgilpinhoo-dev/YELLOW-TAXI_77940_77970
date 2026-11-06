@@ -1,0 +1,34 @@
+{
+  "years": [
+    2023,
+    2024
+  ],
+  "fraction": 0.1,
+  "files": 24,
+  "modules": [
+    "m1",
+    "m2",
+    "m3",
+    "o1",
+    "o2"
+  ],
+  "master": "local[*]",
+  "parallelism": 16,
+  "spark_version": "4.2.0",
+  "broadcast": false,
+  "cache": false,
+  "aqe": false,
+  "o1_method": "window",
+  "clean_rows": 7032347,
+  "timings_s": {
+    "M1_stats": 25.56,
+    "M1_clean_count": 12.32,
+    "M2_write": 65.61,
+    "M3_write": 85.39,
+    "O1_rates": 24.9,
+    "O2_routes_write": 71.43,
+    "O2_reversal_write": 68.69,
+    "O2_top": 102.32
+  },
+  "total_s": 456.22
+}
