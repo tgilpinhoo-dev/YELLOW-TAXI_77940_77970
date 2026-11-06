@@ -206,9 +206,9 @@ O teste de funcionamento com `--fraction 0.01` não é a baseline final.
 O hardware observado, os limites do Docker e os IDs das imagens estão em
 `experiências docker/resultados/ambiente_escala.json`. As configurações e as medições
 estão nos ficheiros de cada corrida e no notebook de experiências.
-Na revisão final da entrega, conferir também as versões das bibliotecas e a
-reprodução do ambiente. A imagem base `spark:python3` segue os Labs, mas a tag
-não fixa uma versão imutável.
+As versões observadas das bibliotecas estão registadas no fim deste README.
+A imagem base `spark:python3` segue os Labs, mas a tag não fixa uma versão
+imutável; não testámos a reprodução num segundo computador.
 
 ### Repetições e opções
 

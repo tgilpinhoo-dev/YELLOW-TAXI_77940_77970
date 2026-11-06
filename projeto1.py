@@ -12,7 +12,7 @@ Pipeline PySpark sobre os dados NYC TLC Yellow Taxi (2023 e 2024).
   O2  rotas origem-destino por mês: quota na zona de partida, top-20 por
       borough e inversão de tendência entre Q1 e Q3
 
-Convenções do grupo (Plano_projeto_Spark_2023_2024.pdf):
+Convenções que adotámos (descritas também no README):
   - distâncias em km: trip_distance_km = trip_distance x 1.609344
     (trip_distance original, em milhas, mantém-se)
   - colunas novas em inglês; comentários em português
