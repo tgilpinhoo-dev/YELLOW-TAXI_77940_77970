@@ -5,7 +5,9 @@ validações executadas no Docker a 10% e a 100% dos dados de 2023–2024.
 As experiências controladas de desempenho e escala estão documentadas.
 A comparação de 10% contra 100% também está concluída (secção 13.6 do
 notebook de experiências); a comparação por anos é complementar.
-O relatório final em PDF está em `report/relatorio_projeto1.pdf`.
+O relatório foi elaborado em LaTeX no Overleaf, seguindo o modelo fornecido.
+Neste repositório disponibilizamos apenas a versão final em PDF, em
+`report/relatorio_projeto1.pdf`.
 As limitações metodológicas estão descritas no próprio relatório.
 
 | Módulo | O que faz | Saída (em `--output`) |
