@@ -1,0 +1,2 @@
+run,wall_time_s,num_jobs,num_stages,num_tasks,executor_run_time_ms,executor_cpu_time_ms,input_bytes,output_bytes,shuffle_read_bytes,shuffle_write_bytes,memory_spilled_bytes,disk_spilled_bytes
+pipeline,77.65,77,142,10829,407384,323448,31.2GB,6.6MB,139.7MB,139.4MB,0.0B,0.0B

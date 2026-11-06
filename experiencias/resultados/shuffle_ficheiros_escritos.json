@@ -1,0 +1,74 @@
+[
+  {
+    "run": "baseline_com_cache_01",
+    "shuffle_partitions": 200,
+    "m2_demand": 18,
+    "m3_zone_month": 6,
+    "o2_route_month": 6,
+    "o2_q1_q3_reversal": 5
+  },
+  {
+    "run": "baseline_com_cache_02",
+    "shuffle_partitions": 200,
+    "m2_demand": 18,
+    "m3_zone_month": 6,
+    "o2_route_month": 6,
+    "o2_q1_q3_reversal": 5
+  },
+  {
+    "run": "baseline_com_cache_03",
+    "shuffle_partitions": 200,
+    "m2_demand": 18,
+    "m3_zone_month": 6,
+    "o2_route_month": 6,
+    "o2_q1_q3_reversal": 5
+  },
+  {
+    "run": "shuffle_12_cache_01",
+    "shuffle_partitions": 12,
+    "m2_demand": 12,
+    "m3_zone_month": 6,
+    "o2_route_month": 6,
+    "o2_q1_q3_reversal": 4
+  },
+  {
+    "run": "shuffle_12_cache_02",
+    "shuffle_partitions": 12,
+    "m2_demand": 12,
+    "m3_zone_month": 6,
+    "o2_route_month": 6,
+    "o2_q1_q3_reversal": 4
+  },
+  {
+    "run": "shuffle_12_cache_03",
+    "shuffle_partitions": 12,
+    "m2_demand": 12,
+    "m3_zone_month": 6,
+    "o2_route_month": 6,
+    "o2_q1_q3_reversal": 4
+  },
+  {
+    "run": "shuffle_24_cache_01",
+    "shuffle_partitions": 24,
+    "m2_demand": 12,
+    "m3_zone_month": 6,
+    "o2_route_month": 6,
+    "o2_q1_q3_reversal": 4
+  },
+  {
+    "run": "shuffle_24_cache_02",
+    "shuffle_partitions": 24,
+    "m2_demand": 12,
+    "m3_zone_month": 6,
+    "o2_route_month": 6,
+    "o2_q1_q3_reversal": 4
+  },
+  {
+    "run": "shuffle_24_cache_03",
+    "shuffle_partitions": 24,
+    "m2_demand": 12,
+    "m3_zone_month": 6,
+    "o2_route_month": 6,
+    "o2_q1_q3_reversal": 4
+  }
+]

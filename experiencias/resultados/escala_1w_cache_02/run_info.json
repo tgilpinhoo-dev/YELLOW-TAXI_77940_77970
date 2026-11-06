@@ -1,0 +1,41 @@
+{
+  "years": [
+    2023,
+    2024
+  ],
+  "fraction": 1.0,
+  "files": 24,
+  "modules": [
+    "m1",
+    "m2",
+    "m3",
+    "o1",
+    "o2"
+  ],
+  "master": "spark://spark-master:7077",
+  "parallelism": 2,
+  "spark_version": "4.2.0",
+  "broadcast": true,
+  "cache": true,
+  "aqe": true,
+  "o1_method": "groupby",
+  "clean_rows": 70353039,
+  "timings_s": {
+    "M1_stats": 15.49,
+    "M1_clean_count": 51.77,
+    "M2_write": 16.58,
+    "M3_write": 13.49,
+    "O1_rates": 10.52,
+    "O2_routes_write": 5.56,
+    "O2_reversal_write": 5.17,
+    "O2_top": 8.79
+  },
+  "total_s": 137.288,
+  "timed_blocks_sum_s": 127.37,
+  "spark_startup_s": 3.621,
+  "total_scope": "leitura ate ultima escrita; exclui arranque Spark e recolha de metricas",
+  "spark_application_id": "app-20261106134722-0029",
+  "shuffle_partitions": "200",
+  "executor_memory": "1536m",
+  "broadcast_scope": "joins com zonas; O1 groupby usa broadcast das estatisticas"
+}

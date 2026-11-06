@@ -1,0 +1,35 @@
+{
+  "collected_local": "2026-11-06T13:40:56.4875376+00:00",
+  "cpu": "Intel(R) Core(TM) Ultra 9 275HX",
+  "host_cores": 24,
+  "host_logical_processors": 24,
+  "host_ram_bytes": 33752997888,
+  "os": "Microsoft Windows 11 Home",
+  "os_version": "10.0.26300",
+  "docker_logical_processors": 24,
+  "docker_memory_bytes": 16467869696,
+  "docker_server_version": "29.8.2",
+  "worker_jupyter_image_id": "sha256:e7506d89125db389e42530cd0522d9aab6befd7ff43642fc66d2f11c9e3da4eb",
+  "master_image_id": "sha256:d283f4305f6b307a7b1effce4fce9f6866f4b536b168809ddbaadb6aea793694",
+  "workers_tested": [
+    1,
+    2,
+    3,
+    6
+  ],
+  "repetitions": 3,
+  "cores_per_worker": 2,
+  "worker_advertised_memory_GiB": 2,
+  "executor_memory_MiB": 1536,
+  "fraction": 1.0,
+  "years": [
+    2023,
+    2024
+  ],
+  "shuffle_partitions": 200,
+  "cache": true,
+  "broadcast": true,
+  "aqe": true,
+  "o1_method": "groupby",
+  "notes": "Mesmo PC e disco; cores/memoria anunciados ao Spark, sem afinidade ou quotas CPU Docker; aumentar workers aumenta tambem memoria total."
+}

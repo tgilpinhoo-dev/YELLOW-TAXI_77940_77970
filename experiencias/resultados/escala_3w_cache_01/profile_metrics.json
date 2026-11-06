@@ -1,0 +1,14 @@
+{
+  "wall_time_s": 76.54,
+  "num_jobs": 77,
+  "num_stages": 142,
+  "num_tasks": 5469,
+  "executor_run_time_ms": 271526,
+  "executor_cpu_time_ms": 228298,
+  "input_bytes": 28821447923,
+  "output_bytes": 6872503,
+  "shuffle_read_bytes": 136189856,
+  "shuffle_write_bytes": 135926458,
+  "memory_spilled_bytes": 0,
+  "disk_spilled_bytes": 0
+}

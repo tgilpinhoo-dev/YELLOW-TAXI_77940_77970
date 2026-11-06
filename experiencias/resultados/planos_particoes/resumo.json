@@ -1,0 +1,54 @@
+{
+  "scope": "inspecao de M2 collect, cache partilhada entre consultas; nao e benchmark",
+  "files": 24,
+  "fraction": 1.0,
+  "input_partitions": 144,
+  "clean_rows": 70353039,
+  "aqe": "true",
+  "spark_version": "4.2.0",
+  "application_id": "app-20261106132813-0024",
+  "plans": [
+    {
+      "shuffle_partitions": 12,
+      "rows": 995,
+      "result_partitions": 2,
+      "file": "m2_shuffle_12.txt",
+      "operators": [
+        "+- AQEShuffleRead (136), coalesced",
+        "Arguments: hashpartitioning(pickup_borough#1364, day_of_week#731, hour_of_day#732, 12), ENSURE_REQUIREMENTS, [plan_id=1014]",
+        "(136) AQEShuffleRead",
+        "Arguments: coalesced",
+        "Arguments: hashpartitioning(pickup_borough#1364, day_of_week#731, hour_of_day#732, 12), ENSURE_REQUIREMENTS, [plan_id=926]",
+        "Arguments: isFinalPlan=true"
+      ]
+    },
+    {
+      "shuffle_partitions": 24,
+      "rows": 995,
+      "result_partitions": 2,
+      "file": "m2_shuffle_24.txt",
+      "operators": [
+        "+- AQEShuffleRead (136), coalesced",
+        "Arguments: hashpartitioning(pickup_borough#1801, day_of_week#731, hour_of_day#732, 24), ENSURE_REQUIREMENTS, [plan_id=1159]",
+        "(136) AQEShuffleRead",
+        "Arguments: coalesced",
+        "Arguments: hashpartitioning(pickup_borough#1801, day_of_week#731, hour_of_day#732, 24), ENSURE_REQUIREMENTS, [plan_id=1071]",
+        "Arguments: isFinalPlan=true"
+      ]
+    },
+    {
+      "shuffle_partitions": 200,
+      "rows": 995,
+      "result_partitions": 3,
+      "file": "m2_shuffle_200.txt",
+      "operators": [
+        "+- AQEShuffleRead (136), coalesced",
+        "Arguments: hashpartitioning(pickup_borough#2238, day_of_week#731, hour_of_day#732, 200), ENSURE_REQUIREMENTS, [plan_id=1304]",
+        "(136) AQEShuffleRead",
+        "Arguments: coalesced",
+        "Arguments: hashpartitioning(pickup_borough#2238, day_of_week#731, hour_of_day#732, 200), ENSURE_REQUIREMENTS, [plan_id=1216]",
+        "Arguments: isFinalPlan=true"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+[
+  {
+    "experiment": "Cache",
+    "change": "Sem cache → cache",
+    "alternative_prefix": "baseline_sem_cache",
+    "selected_prefix": "baseline_com_cache",
+    "alternative_times_s": [
+      101.269,
+      103.528,
+      100.62
+    ],
+    "selected_times_s": [
+      74.981,
+      76.861,
+      79.109
+    ],
+    "alternative_median_s": 101.269,
+    "alternative_min_s": 100.62,
+    "alternative_max_s": 103.528,
+    "selected_median_s": 76.861,
+    "selected_min_s": 74.981,
+    "selected_max_s": 79.109,
+    "reduction_pct": 24.10214379523843
+  },
+  {
+    "experiment": "O1",
+    "change": "Janela → groupBy",
+    "alternative_prefix": "o1_window_cache",
+    "selected_prefix": "baseline_com_cache",
+    "alternative_times_s": [
+      81.24,
+      83.298,
+      85.165
+    ],
+    "selected_times_s": [
+      74.981,
+      76.861,
+      79.109
+    ],
+    "alternative_median_s": 83.298,
+    "alternative_min_s": 81.24,
+    "alternative_max_s": 85.165,
+    "selected_median_s": 76.861,
+    "selected_min_s": 74.981,
+    "selected_max_s": 79.109,
+    "reduction_pct": 7.727676534850769
+  },
+  {
+    "experiment": "Joins das zonas",
+    "change": "Sort-merge → broadcast",
+    "alternative_prefix": "zonas_sortmerge_cache",
+    "selected_prefix": "baseline_com_cache",
+    "alternative_times_s": [
+      94.718,
+      95.893,
+      97.943
+    ],
+    "selected_times_s": [
+      74.981,
+      76.861,
+      79.109
+    ],
+    "alternative_median_s": 95.893,
+    "alternative_min_s": 94.718,
+    "alternative_max_s": 97.943,
+    "selected_median_s": 76.861,
+    "selected_min_s": 74.981,
+    "selected_max_s": 79.109,
+    "reduction_pct": 19.847121270582836
+  },
+  {
+    "experiment": "AQE",
+    "change": "Desligado → ligado",
+    "alternative_prefix": "aqe_desligado_cache",
+    "selected_prefix": "baseline_com_cache",
+    "alternative_times_s": [
+      331.774,
+      333.595,
+      336.107
+    ],
+    "selected_times_s": [
+      74.981,
+      76.861,
+      79.109
+    ],
+    "alternative_median_s": 333.595,
+    "alternative_min_s": 331.774,
+    "alternative_max_s": 336.107,
+    "selected_median_s": 76.861,
+    "selected_min_s": 74.981,
+    "selected_max_s": 79.109,
+    "reduction_pct": 76.95978656754447
+  }
+]

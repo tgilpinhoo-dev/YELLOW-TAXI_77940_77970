@@ -1,0 +1,820 @@
+== Physical Plan ==
+AdaptiveSparkPlan (151)
++- Project (150)
+   +- SortMergeJoin Inner (149)
+      :- Sort (143)
+      :  +- Exchange (142)
+      :     +- Project (141)
+      :        +- SortMergeJoin Inner (140)
+      :           :- Sort (134)
+      :           :  +- Exchange (133)
+      :           :     +- Project (132)
+      :           :        +- Filter (131)
+      :           :           +- Window (130)
+      :           :              +- Sort (129)
+      :           :                 +- Exchange (128)
+      :           :                    +- HashAggregate (127)
+      :           :                       +- Exchange (126)
+      :           :                          +- HashAggregate (125)
+      :           :                             +- Filter (124)
+      :           :                                +- InMemoryTableScan (1)
+      :           :                                      +- InMemoryRelation (2)
+      :           :                                            +- Union (123)
+      :           :                                               :- * Project (7)
+      :           :                                               :  +- * Project (6)
+      :           :                                               :     +- * Filter (5)
+      :           :                                               :        +- * ColumnarToRow (4)
+      :           :                                               :           +- Scan parquet  (3)
+      :           :                                               :- * Project (12)
+      :           :                                               :  +- * Project (11)
+      :           :                                               :     +- * Filter (10)
+      :           :                                               :        +- * ColumnarToRow (9)
+      :           :                                               :           +- Scan parquet  (8)
+      :           :                                               :- * Project (17)
+      :           :                                               :  +- * Project (16)
+      :           :                                               :     +- * Filter (15)
+      :           :                                               :        +- * ColumnarToRow (14)
+      :           :                                               :           +- Scan parquet  (13)
+      :           :                                               :- * Project (22)
+      :           :                                               :  +- * Project (21)
+      :           :                                               :     +- * Filter (20)
+      :           :                                               :        +- * ColumnarToRow (19)
+      :           :                                               :           +- Scan parquet  (18)
+      :           :                                               :- * Project (27)
+      :           :                                               :  +- * Project (26)
+      :           :                                               :     +- * Filter (25)
+      :           :                                               :        +- * ColumnarToRow (24)
+      :           :                                               :           +- Scan parquet  (23)
+      :           :                                               :- * Project (32)
+      :           :                                               :  +- * Project (31)
+      :           :                                               :     +- * Filter (30)
+      :           :                                               :        +- * ColumnarToRow (29)
+      :           :                                               :           +- Scan parquet  (28)
+      :           :                                               :- * Project (37)
+      :           :                                               :  +- * Project (36)
+      :           :                                               :     +- * Filter (35)
+      :           :                                               :        +- * ColumnarToRow (34)
+      :           :                                               :           +- Scan parquet  (33)
+      :           :                                               :- * Project (42)
+      :           :                                               :  +- * Project (41)
+      :           :                                               :     +- * Filter (40)
+      :           :                                               :        +- * ColumnarToRow (39)
+      :           :                                               :           +- Scan parquet  (38)
+      :           :                                               :- * Project (47)
+      :           :                                               :  +- * Project (46)
+      :           :                                               :     +- * Filter (45)
+      :           :                                               :        +- * ColumnarToRow (44)
+      :           :                                               :           +- Scan parquet  (43)
+      :           :                                               :- * Project (52)
+      :           :                                               :  +- * Project (51)
+      :           :                                               :     +- * Filter (50)
+      :           :                                               :        +- * ColumnarToRow (49)
+      :           :                                               :           +- Scan parquet  (48)
+      :           :                                               :- * Project (57)
+      :           :                                               :  +- * Project (56)
+      :           :                                               :     +- * Filter (55)
+      :           :                                               :        +- * ColumnarToRow (54)
+      :           :                                               :           +- Scan parquet  (53)
+      :           :                                               :- * Project (62)
+      :           :                                               :  +- * Project (61)
+      :           :                                               :     +- * Filter (60)
+      :           :                                               :        +- * ColumnarToRow (59)
+      :           :                                               :           +- Scan parquet  (58)
+      :           :                                               :- * Project (67)
+      :           :                                               :  +- * Project (66)
+      :           :                                               :     +- * Filter (65)
+      :           :                                               :        +- * ColumnarToRow (64)
+      :           :                                               :           +- Scan parquet  (63)
+      :           :                                               :- * Project (72)
+      :           :                                               :  +- * Project (71)
+      :           :                                               :     +- * Filter (70)
+      :           :                                               :        +- * ColumnarToRow (69)
+      :           :                                               :           +- Scan parquet  (68)
+      :           :                                               :- * Project (77)
+      :           :                                               :  +- * Project (76)
+      :           :                                               :     +- * Filter (75)
+      :           :                                               :        +- * ColumnarToRow (74)
+      :           :                                               :           +- Scan parquet  (73)
+      :           :                                               :- * Project (82)
+      :           :                                               :  +- * Project (81)
+      :           :                                               :     +- * Filter (80)
+      :           :                                               :        +- * ColumnarToRow (79)
+      :           :                                               :           +- Scan parquet  (78)
+      :           :                                               :- * Project (87)
+      :           :                                               :  +- * Project (86)
+      :           :                                               :     +- * Filter (85)
+      :           :                                               :        +- * ColumnarToRow (84)
+      :           :                                               :           +- Scan parquet  (83)
+      :           :                                               :- * Project (92)
+      :           :                                               :  +- * Project (91)
+      :           :                                               :     +- * Filter (90)
+      :           :                                               :        +- * ColumnarToRow (89)
+      :           :                                               :           +- Scan parquet  (88)
+      :           :                                               :- * Project (97)
+      :           :                                               :  +- * Project (96)
+      :           :                                               :     +- * Filter (95)
+      :           :                                               :        +- * ColumnarToRow (94)
+      :           :                                               :           +- Scan parquet  (93)
+      :           :                                               :- * Project (102)
+      :           :                                               :  +- * Project (101)
+      :           :                                               :     +- * Filter (100)
+      :           :                                               :        +- * ColumnarToRow (99)
+      :           :                                               :           +- Scan parquet  (98)
+      :           :                                               :- * Project (107)
+      :           :                                               :  +- * Project (106)
+      :           :                                               :     +- * Filter (105)
+      :           :                                               :        +- * ColumnarToRow (104)
+      :           :                                               :           +- Scan parquet  (103)
+      :           :                                               :- * Project (112)
+      :           :                                               :  +- * Project (111)
+      :           :                                               :     +- * Filter (110)
+      :           :                                               :        +- * ColumnarToRow (109)
+      :           :                                               :           +- Scan parquet  (108)
+      :           :                                               :- * Project (117)
+      :           :                                               :  +- * Project (116)
+      :           :                                               :     +- * Filter (115)
+      :           :                                               :        +- * ColumnarToRow (114)
+      :           :                                               :           +- Scan parquet  (113)
+      :           :                                               +- * Project (122)
+      :           :                                                  +- * Project (121)
+      :           :                                                     +- * Filter (120)
+      :           :                                                        +- * ColumnarToRow (119)
+      :           :                                                           +- Scan parquet  (118)
+      :           +- Sort (139)
+      :              +- Exchange (138)
+      :                 +- Project (137)
+      :                    +- Filter (136)
+      :                       +- Scan csv  (135)
+      +- Sort (148)
+         +- Exchange (147)
+            +- Project (146)
+               +- Filter (145)
+                  +- Scan csv  (144)
+
+
+(1) InMemoryTableScan
+Output [4]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730]
+Arguments: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730], [isnotnull(PULocationID#23)]
+
+(2) InMemoryRelation
+Arguments: [tpep_pickup_datetime#19, tpep_dropoff_datetime#20, passenger_count#21, trip_distance#22, PULocationID#23, DOLocationID#24, payment_type#25, fare_amount#26, source_year#28, trip_distance_km#727, trip_duration_minutes#728, pickup_year#729, pickup_month#730, day_of_week#731, hour_of_day#732], StorageLevel(disk, memory, deserialized, 1 replicas)
+
+(3) Scan parquet 
+Output [8]: [tpep_pickup_datetime#1, tpep_dropoff_datetime#2, passenger_count#3, trip_distance#4, PULocationID#7L, DOLocationID#8L, payment_type#9L, fare_amount#10]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2023/yellow_tripdata_2023-01.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:double,trip_distance:double,PULocationID:bigint,DOLocationID:bigint,payment_type:bigint,fare_amount:double>
+
+(4) ColumnarToRow [codegen id : 1]
+Input [8]: [tpep_pickup_datetime#1, tpep_dropoff_datetime#2, passenger_count#3, trip_distance#4, PULocationID#7L, DOLocationID#8L, payment_type#9L, fare_amount#10]
+
+(5) Filter [codegen id : 1]
+Input [8]: [tpep_pickup_datetime#1, tpep_dropoff_datetime#2, passenger_count#3, trip_distance#4, PULocationID#7L, DOLocationID#8L, payment_type#9L, fare_amount#10]
+Condition : (((((((((((((((((((((isnotnull(tpep_pickup_datetime#1) AND isnotnull(tpep_dropoff_datetime#2)) AND isnotnull(passenger_count#3)) AND isnotnull(PULocationID#7L)) AND isnotnull(DOLocationID#8L)) AND isnotnull(payment_type#9L)) AND isnotnull(try_cast(tpep_pickup_datetime#1 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#2 as timestamp))) AND isnotnull(try_cast(passenger_count#3 as int))) AND isnotnull(trip_distance#4)) AND NOT isnan(trip_distance#4)) AND isnotnull(try_cast(PULocationID#7L as int))) AND isnotnull(try_cast(DOLocationID#8L as int))) AND isnotnull(try_cast(payment_type#9L as int))) AND isnotnull(fare_amount#10)) AND NOT isnan(fare_amount#10)) AND NOT coalesce((fare_amount#10 <= 0.0), false)) AND NOT coalesce((trip_distance#4 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#3 as int) < 1) OR (try_cast(passenger_count#3 as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#2 as timestamp) <= try_cast(tpep_pickup_datetime#1 as timestamp)), false)) AND NOT coalesce((((try_cast(PULocationID#7L as int) < 1) OR (try_cast(PULocationID#7L as int) > 263)) OR ((try_cast(DOLocationID#8L as int) < 1) OR (try_cast(DOLocationID#8L as int) > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#1 as timestamp) as date)) = 2023), false))
+
+(6) Project [codegen id : 1]
+Output [8]: [try_cast(tpep_pickup_datetime#1 as timestamp) AS tpep_pickup_datetime#19, try_cast(tpep_dropoff_datetime#2 as timestamp) AS tpep_dropoff_datetime#20, try_cast(passenger_count#3 as int) AS passenger_count#21, trip_distance#4 AS trip_distance#22, try_cast(PULocationID#7L as int) AS PULocationID#23, try_cast(DOLocationID#8L as int) AS DOLocationID#24, try_cast(payment_type#9L as int) AS payment_type#25, fare_amount#10 AS fare_amount#26]
+Input [8]: [tpep_pickup_datetime#1, tpep_dropoff_datetime#2, passenger_count#3, trip_distance#4, PULocationID#7L, DOLocationID#8L, payment_type#9L, fare_amount#10]
+
+(7) Project [codegen id : 1]
+Output [15]: [tpep_pickup_datetime#19, tpep_dropoff_datetime#20, passenger_count#21, trip_distance#22, PULocationID#23, DOLocationID#24, payment_type#25, fare_amount#26, 2023 AS source_year#28, (trip_distance#22 * 1.609344) AS trip_distance_km#727, (cast((unix_timestamp(tpep_dropoff_datetime#20, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#19, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#728, year(cast(tpep_pickup_datetime#19 as date)) AS pickup_year#729, month(cast(tpep_pickup_datetime#19 as date)) AS pickup_month#730, dayofweek(cast(tpep_pickup_datetime#19 as date)) AS day_of_week#731, hour(tpep_pickup_datetime#19, Some(UTC)) AS hour_of_day#732]
+Input [8]: [tpep_pickup_datetime#19, tpep_dropoff_datetime#20, passenger_count#21, trip_distance#22, PULocationID#23, DOLocationID#24, payment_type#25, fare_amount#26]
+
+(8) Scan parquet 
+Output [8]: [tpep_pickup_datetime#30, tpep_dropoff_datetime#31, passenger_count#32L, trip_distance#33, PULocationID#36, DOLocationID#37, payment_type#38L, fare_amount#39]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2023/yellow_tripdata_2023-02.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(9) ColumnarToRow [codegen id : 2]
+Input [8]: [tpep_pickup_datetime#30, tpep_dropoff_datetime#31, passenger_count#32L, trip_distance#33, PULocationID#36, DOLocationID#37, payment_type#38L, fare_amount#39]
+
+(10) Filter [codegen id : 2]
+Input [8]: [tpep_pickup_datetime#30, tpep_dropoff_datetime#31, passenger_count#32L, trip_distance#33, PULocationID#36, DOLocationID#37, payment_type#38L, fare_amount#39]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#30) AND isnotnull(tpep_dropoff_datetime#31)) AND isnotnull(passenger_count#32L)) AND isnotnull(payment_type#38L)) AND isnotnull(try_cast(tpep_pickup_datetime#30 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#31 as timestamp))) AND isnotnull(try_cast(passenger_count#32L as int))) AND isnotnull(trip_distance#33)) AND NOT isnan(trip_distance#33)) AND isnotnull(PULocationID#36)) AND isnotnull(DOLocationID#37)) AND isnotnull(try_cast(payment_type#38L as int))) AND isnotnull(fare_amount#39)) AND NOT isnan(fare_amount#39)) AND NOT coalesce((fare_amount#39 <= 0.0), false)) AND NOT coalesce((trip_distance#33 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#32L as int) < 1) OR (try_cast(passenger_count#32L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#31 as timestamp) <= try_cast(tpep_pickup_datetime#30 as timestamp)), false)) AND NOT coalesce((((PULocationID#36 < 1) OR (PULocationID#36 > 263)) OR ((DOLocationID#37 < 1) OR (DOLocationID#37 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#30 as timestamp) as date)) = 2023), false))
+
+(11) Project [codegen id : 2]
+Output [8]: [try_cast(tpep_pickup_datetime#30 as timestamp) AS tpep_pickup_datetime#48, try_cast(tpep_dropoff_datetime#31 as timestamp) AS tpep_dropoff_datetime#49, try_cast(passenger_count#32L as int) AS passenger_count#50, trip_distance#33, PULocationID#36, DOLocationID#37, try_cast(payment_type#38L as int) AS payment_type#54, fare_amount#39]
+Input [8]: [tpep_pickup_datetime#30, tpep_dropoff_datetime#31, passenger_count#32L, trip_distance#33, PULocationID#36, DOLocationID#37, payment_type#38L, fare_amount#39]
+
+(12) Project [codegen id : 2]
+Output [15]: [tpep_pickup_datetime#48, tpep_dropoff_datetime#49, passenger_count#50, trip_distance#33, PULocationID#36, DOLocationID#37, payment_type#54, fare_amount#39, 2023 AS source_year#57, (trip_distance#33 * 1.609344) AS trip_distance_km#756, (cast((unix_timestamp(tpep_dropoff_datetime#49, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#48, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#757, year(cast(tpep_pickup_datetime#48 as date)) AS pickup_year#758, month(cast(tpep_pickup_datetime#48 as date)) AS pickup_month#759, dayofweek(cast(tpep_pickup_datetime#48 as date)) AS day_of_week#760, hour(tpep_pickup_datetime#48, Some(UTC)) AS hour_of_day#761]
+Input [8]: [tpep_pickup_datetime#48, tpep_dropoff_datetime#49, passenger_count#50, trip_distance#33, PULocationID#36, DOLocationID#37, payment_type#54, fare_amount#39]
+
+(13) Scan parquet 
+Output [8]: [tpep_pickup_datetime#59, tpep_dropoff_datetime#60, passenger_count#61L, trip_distance#62, PULocationID#65, DOLocationID#66, payment_type#67L, fare_amount#68]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2023/yellow_tripdata_2023-03.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(14) ColumnarToRow [codegen id : 3]
+Input [8]: [tpep_pickup_datetime#59, tpep_dropoff_datetime#60, passenger_count#61L, trip_distance#62, PULocationID#65, DOLocationID#66, payment_type#67L, fare_amount#68]
+
+(15) Filter [codegen id : 3]
+Input [8]: [tpep_pickup_datetime#59, tpep_dropoff_datetime#60, passenger_count#61L, trip_distance#62, PULocationID#65, DOLocationID#66, payment_type#67L, fare_amount#68]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#59) AND isnotnull(tpep_dropoff_datetime#60)) AND isnotnull(passenger_count#61L)) AND isnotnull(payment_type#67L)) AND isnotnull(try_cast(tpep_pickup_datetime#59 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#60 as timestamp))) AND isnotnull(try_cast(passenger_count#61L as int))) AND isnotnull(trip_distance#62)) AND NOT isnan(trip_distance#62)) AND isnotnull(PULocationID#65)) AND isnotnull(DOLocationID#66)) AND isnotnull(try_cast(payment_type#67L as int))) AND isnotnull(fare_amount#68)) AND NOT isnan(fare_amount#68)) AND NOT coalesce((fare_amount#68 <= 0.0), false)) AND NOT coalesce((trip_distance#62 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#61L as int) < 1) OR (try_cast(passenger_count#61L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#60 as timestamp) <= try_cast(tpep_pickup_datetime#59 as timestamp)), false)) AND NOT coalesce((((PULocationID#65 < 1) OR (PULocationID#65 > 263)) OR ((DOLocationID#66 < 1) OR (DOLocationID#66 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#59 as timestamp) as date)) = 2023), false))
+
+(16) Project [codegen id : 3]
+Output [8]: [try_cast(tpep_pickup_datetime#59 as timestamp) AS tpep_pickup_datetime#77, try_cast(tpep_dropoff_datetime#60 as timestamp) AS tpep_dropoff_datetime#78, try_cast(passenger_count#61L as int) AS passenger_count#79, trip_distance#62, PULocationID#65, DOLocationID#66, try_cast(payment_type#67L as int) AS payment_type#83, fare_amount#68]
+Input [8]: [tpep_pickup_datetime#59, tpep_dropoff_datetime#60, passenger_count#61L, trip_distance#62, PULocationID#65, DOLocationID#66, payment_type#67L, fare_amount#68]
+
+(17) Project [codegen id : 3]
+Output [15]: [tpep_pickup_datetime#77, tpep_dropoff_datetime#78, passenger_count#79, trip_distance#62, PULocationID#65, DOLocationID#66, payment_type#83, fare_amount#68, 2023 AS source_year#86, (trip_distance#62 * 1.609344) AS trip_distance_km#762, (cast((unix_timestamp(tpep_dropoff_datetime#78, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#77, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#763, year(cast(tpep_pickup_datetime#77 as date)) AS pickup_year#764, month(cast(tpep_pickup_datetime#77 as date)) AS pickup_month#765, dayofweek(cast(tpep_pickup_datetime#77 as date)) AS day_of_week#766, hour(tpep_pickup_datetime#77, Some(UTC)) AS hour_of_day#767]
+Input [8]: [tpep_pickup_datetime#77, tpep_dropoff_datetime#78, passenger_count#79, trip_distance#62, PULocationID#65, DOLocationID#66, payment_type#83, fare_amount#68]
+
+(18) Scan parquet 
+Output [8]: [tpep_pickup_datetime#88, tpep_dropoff_datetime#89, passenger_count#90L, trip_distance#91, PULocationID#94, DOLocationID#95, payment_type#96L, fare_amount#97]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2023/yellow_tripdata_2023-04.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(19) ColumnarToRow [codegen id : 4]
+Input [8]: [tpep_pickup_datetime#88, tpep_dropoff_datetime#89, passenger_count#90L, trip_distance#91, PULocationID#94, DOLocationID#95, payment_type#96L, fare_amount#97]
+
+(20) Filter [codegen id : 4]
+Input [8]: [tpep_pickup_datetime#88, tpep_dropoff_datetime#89, passenger_count#90L, trip_distance#91, PULocationID#94, DOLocationID#95, payment_type#96L, fare_amount#97]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#88) AND isnotnull(tpep_dropoff_datetime#89)) AND isnotnull(passenger_count#90L)) AND isnotnull(payment_type#96L)) AND isnotnull(try_cast(tpep_pickup_datetime#88 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#89 as timestamp))) AND isnotnull(try_cast(passenger_count#90L as int))) AND isnotnull(trip_distance#91)) AND NOT isnan(trip_distance#91)) AND isnotnull(PULocationID#94)) AND isnotnull(DOLocationID#95)) AND isnotnull(try_cast(payment_type#96L as int))) AND isnotnull(fare_amount#97)) AND NOT isnan(fare_amount#97)) AND NOT coalesce((fare_amount#97 <= 0.0), false)) AND NOT coalesce((trip_distance#91 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#90L as int) < 1) OR (try_cast(passenger_count#90L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#89 as timestamp) <= try_cast(tpep_pickup_datetime#88 as timestamp)), false)) AND NOT coalesce((((PULocationID#94 < 1) OR (PULocationID#94 > 263)) OR ((DOLocationID#95 < 1) OR (DOLocationID#95 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#88 as timestamp) as date)) = 2023), false))
+
+(21) Project [codegen id : 4]
+Output [8]: [try_cast(tpep_pickup_datetime#88 as timestamp) AS tpep_pickup_datetime#106, try_cast(tpep_dropoff_datetime#89 as timestamp) AS tpep_dropoff_datetime#107, try_cast(passenger_count#90L as int) AS passenger_count#108, trip_distance#91, PULocationID#94, DOLocationID#95, try_cast(payment_type#96L as int) AS payment_type#112, fare_amount#97]
+Input [8]: [tpep_pickup_datetime#88, tpep_dropoff_datetime#89, passenger_count#90L, trip_distance#91, PULocationID#94, DOLocationID#95, payment_type#96L, fare_amount#97]
+
+(22) Project [codegen id : 4]
+Output [15]: [tpep_pickup_datetime#106, tpep_dropoff_datetime#107, passenger_count#108, trip_distance#91, PULocationID#94, DOLocationID#95, payment_type#112, fare_amount#97, 2023 AS source_year#115, (trip_distance#91 * 1.609344) AS trip_distance_km#768, (cast((unix_timestamp(tpep_dropoff_datetime#107, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#106, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#769, year(cast(tpep_pickup_datetime#106 as date)) AS pickup_year#770, month(cast(tpep_pickup_datetime#106 as date)) AS pickup_month#771, dayofweek(cast(tpep_pickup_datetime#106 as date)) AS day_of_week#772, hour(tpep_pickup_datetime#106, Some(UTC)) AS hour_of_day#773]
+Input [8]: [tpep_pickup_datetime#106, tpep_dropoff_datetime#107, passenger_count#108, trip_distance#91, PULocationID#94, DOLocationID#95, payment_type#112, fare_amount#97]
+
+(23) Scan parquet 
+Output [8]: [tpep_pickup_datetime#117, tpep_dropoff_datetime#118, passenger_count#119L, trip_distance#120, PULocationID#123, DOLocationID#124, payment_type#125L, fare_amount#126]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2023/yellow_tripdata_2023-05.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(24) ColumnarToRow [codegen id : 5]
+Input [8]: [tpep_pickup_datetime#117, tpep_dropoff_datetime#118, passenger_count#119L, trip_distance#120, PULocationID#123, DOLocationID#124, payment_type#125L, fare_amount#126]
+
+(25) Filter [codegen id : 5]
+Input [8]: [tpep_pickup_datetime#117, tpep_dropoff_datetime#118, passenger_count#119L, trip_distance#120, PULocationID#123, DOLocationID#124, payment_type#125L, fare_amount#126]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#117) AND isnotnull(tpep_dropoff_datetime#118)) AND isnotnull(passenger_count#119L)) AND isnotnull(payment_type#125L)) AND isnotnull(try_cast(tpep_pickup_datetime#117 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#118 as timestamp))) AND isnotnull(try_cast(passenger_count#119L as int))) AND isnotnull(trip_distance#120)) AND NOT isnan(trip_distance#120)) AND isnotnull(PULocationID#123)) AND isnotnull(DOLocationID#124)) AND isnotnull(try_cast(payment_type#125L as int))) AND isnotnull(fare_amount#126)) AND NOT isnan(fare_amount#126)) AND NOT coalesce((fare_amount#126 <= 0.0), false)) AND NOT coalesce((trip_distance#120 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#119L as int) < 1) OR (try_cast(passenger_count#119L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#118 as timestamp) <= try_cast(tpep_pickup_datetime#117 as timestamp)), false)) AND NOT coalesce((((PULocationID#123 < 1) OR (PULocationID#123 > 263)) OR ((DOLocationID#124 < 1) OR (DOLocationID#124 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#117 as timestamp) as date)) = 2023), false))
+
+(26) Project [codegen id : 5]
+Output [8]: [try_cast(tpep_pickup_datetime#117 as timestamp) AS tpep_pickup_datetime#135, try_cast(tpep_dropoff_datetime#118 as timestamp) AS tpep_dropoff_datetime#136, try_cast(passenger_count#119L as int) AS passenger_count#137, trip_distance#120, PULocationID#123, DOLocationID#124, try_cast(payment_type#125L as int) AS payment_type#141, fare_amount#126]
+Input [8]: [tpep_pickup_datetime#117, tpep_dropoff_datetime#118, passenger_count#119L, trip_distance#120, PULocationID#123, DOLocationID#124, payment_type#125L, fare_amount#126]
+
+(27) Project [codegen id : 5]
+Output [15]: [tpep_pickup_datetime#135, tpep_dropoff_datetime#136, passenger_count#137, trip_distance#120, PULocationID#123, DOLocationID#124, payment_type#141, fare_amount#126, 2023 AS source_year#144, (trip_distance#120 * 1.609344) AS trip_distance_km#774, (cast((unix_timestamp(tpep_dropoff_datetime#136, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#135, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#775, year(cast(tpep_pickup_datetime#135 as date)) AS pickup_year#776, month(cast(tpep_pickup_datetime#135 as date)) AS pickup_month#777, dayofweek(cast(tpep_pickup_datetime#135 as date)) AS day_of_week#778, hour(tpep_pickup_datetime#135, Some(UTC)) AS hour_of_day#779]
+Input [8]: [tpep_pickup_datetime#135, tpep_dropoff_datetime#136, passenger_count#137, trip_distance#120, PULocationID#123, DOLocationID#124, payment_type#141, fare_amount#126]
+
+(28) Scan parquet 
+Output [8]: [tpep_pickup_datetime#146, tpep_dropoff_datetime#147, passenger_count#148L, trip_distance#149, PULocationID#152, DOLocationID#153, payment_type#154L, fare_amount#155]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2023/yellow_tripdata_2023-06.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(29) ColumnarToRow [codegen id : 6]
+Input [8]: [tpep_pickup_datetime#146, tpep_dropoff_datetime#147, passenger_count#148L, trip_distance#149, PULocationID#152, DOLocationID#153, payment_type#154L, fare_amount#155]
+
+(30) Filter [codegen id : 6]
+Input [8]: [tpep_pickup_datetime#146, tpep_dropoff_datetime#147, passenger_count#148L, trip_distance#149, PULocationID#152, DOLocationID#153, payment_type#154L, fare_amount#155]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#146) AND isnotnull(tpep_dropoff_datetime#147)) AND isnotnull(passenger_count#148L)) AND isnotnull(payment_type#154L)) AND isnotnull(try_cast(tpep_pickup_datetime#146 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#147 as timestamp))) AND isnotnull(try_cast(passenger_count#148L as int))) AND isnotnull(trip_distance#149)) AND NOT isnan(trip_distance#149)) AND isnotnull(PULocationID#152)) AND isnotnull(DOLocationID#153)) AND isnotnull(try_cast(payment_type#154L as int))) AND isnotnull(fare_amount#155)) AND NOT isnan(fare_amount#155)) AND NOT coalesce((fare_amount#155 <= 0.0), false)) AND NOT coalesce((trip_distance#149 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#148L as int) < 1) OR (try_cast(passenger_count#148L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#147 as timestamp) <= try_cast(tpep_pickup_datetime#146 as timestamp)), false)) AND NOT coalesce((((PULocationID#152 < 1) OR (PULocationID#152 > 263)) OR ((DOLocationID#153 < 1) OR (DOLocationID#153 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#146 as timestamp) as date)) = 2023), false))
+
+(31) Project [codegen id : 6]
+Output [8]: [try_cast(tpep_pickup_datetime#146 as timestamp) AS tpep_pickup_datetime#164, try_cast(tpep_dropoff_datetime#147 as timestamp) AS tpep_dropoff_datetime#165, try_cast(passenger_count#148L as int) AS passenger_count#166, trip_distance#149, PULocationID#152, DOLocationID#153, try_cast(payment_type#154L as int) AS payment_type#170, fare_amount#155]
+Input [8]: [tpep_pickup_datetime#146, tpep_dropoff_datetime#147, passenger_count#148L, trip_distance#149, PULocationID#152, DOLocationID#153, payment_type#154L, fare_amount#155]
+
+(32) Project [codegen id : 6]
+Output [15]: [tpep_pickup_datetime#164, tpep_dropoff_datetime#165, passenger_count#166, trip_distance#149, PULocationID#152, DOLocationID#153, payment_type#170, fare_amount#155, 2023 AS source_year#173, (trip_distance#149 * 1.609344) AS trip_distance_km#780, (cast((unix_timestamp(tpep_dropoff_datetime#165, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#164, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#781, year(cast(tpep_pickup_datetime#164 as date)) AS pickup_year#782, month(cast(tpep_pickup_datetime#164 as date)) AS pickup_month#783, dayofweek(cast(tpep_pickup_datetime#164 as date)) AS day_of_week#784, hour(tpep_pickup_datetime#164, Some(UTC)) AS hour_of_day#785]
+Input [8]: [tpep_pickup_datetime#164, tpep_dropoff_datetime#165, passenger_count#166, trip_distance#149, PULocationID#152, DOLocationID#153, payment_type#170, fare_amount#155]
+
+(33) Scan parquet 
+Output [8]: [tpep_pickup_datetime#175, tpep_dropoff_datetime#176, passenger_count#177L, trip_distance#178, PULocationID#181, DOLocationID#182, payment_type#183L, fare_amount#184]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2023/yellow_tripdata_2023-07.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(34) ColumnarToRow [codegen id : 7]
+Input [8]: [tpep_pickup_datetime#175, tpep_dropoff_datetime#176, passenger_count#177L, trip_distance#178, PULocationID#181, DOLocationID#182, payment_type#183L, fare_amount#184]
+
+(35) Filter [codegen id : 7]
+Input [8]: [tpep_pickup_datetime#175, tpep_dropoff_datetime#176, passenger_count#177L, trip_distance#178, PULocationID#181, DOLocationID#182, payment_type#183L, fare_amount#184]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#175) AND isnotnull(tpep_dropoff_datetime#176)) AND isnotnull(passenger_count#177L)) AND isnotnull(payment_type#183L)) AND isnotnull(try_cast(tpep_pickup_datetime#175 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#176 as timestamp))) AND isnotnull(try_cast(passenger_count#177L as int))) AND isnotnull(trip_distance#178)) AND NOT isnan(trip_distance#178)) AND isnotnull(PULocationID#181)) AND isnotnull(DOLocationID#182)) AND isnotnull(try_cast(payment_type#183L as int))) AND isnotnull(fare_amount#184)) AND NOT isnan(fare_amount#184)) AND NOT coalesce((fare_amount#184 <= 0.0), false)) AND NOT coalesce((trip_distance#178 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#177L as int) < 1) OR (try_cast(passenger_count#177L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#176 as timestamp) <= try_cast(tpep_pickup_datetime#175 as timestamp)), false)) AND NOT coalesce((((PULocationID#181 < 1) OR (PULocationID#181 > 263)) OR ((DOLocationID#182 < 1) OR (DOLocationID#182 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#175 as timestamp) as date)) = 2023), false))
+
+(36) Project [codegen id : 7]
+Output [8]: [try_cast(tpep_pickup_datetime#175 as timestamp) AS tpep_pickup_datetime#193, try_cast(tpep_dropoff_datetime#176 as timestamp) AS tpep_dropoff_datetime#194, try_cast(passenger_count#177L as int) AS passenger_count#195, trip_distance#178, PULocationID#181, DOLocationID#182, try_cast(payment_type#183L as int) AS payment_type#199, fare_amount#184]
+Input [8]: [tpep_pickup_datetime#175, tpep_dropoff_datetime#176, passenger_count#177L, trip_distance#178, PULocationID#181, DOLocationID#182, payment_type#183L, fare_amount#184]
+
+(37) Project [codegen id : 7]
+Output [15]: [tpep_pickup_datetime#193, tpep_dropoff_datetime#194, passenger_count#195, trip_distance#178, PULocationID#181, DOLocationID#182, payment_type#199, fare_amount#184, 2023 AS source_year#202, (trip_distance#178 * 1.609344) AS trip_distance_km#786, (cast((unix_timestamp(tpep_dropoff_datetime#194, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#193, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#787, year(cast(tpep_pickup_datetime#193 as date)) AS pickup_year#788, month(cast(tpep_pickup_datetime#193 as date)) AS pickup_month#789, dayofweek(cast(tpep_pickup_datetime#193 as date)) AS day_of_week#790, hour(tpep_pickup_datetime#193, Some(UTC)) AS hour_of_day#791]
+Input [8]: [tpep_pickup_datetime#193, tpep_dropoff_datetime#194, passenger_count#195, trip_distance#178, PULocationID#181, DOLocationID#182, payment_type#199, fare_amount#184]
+
+(38) Scan parquet 
+Output [8]: [tpep_pickup_datetime#204, tpep_dropoff_datetime#205, passenger_count#206L, trip_distance#207, PULocationID#210, DOLocationID#211, payment_type#212L, fare_amount#213]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2023/yellow_tripdata_2023-08.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(39) ColumnarToRow [codegen id : 8]
+Input [8]: [tpep_pickup_datetime#204, tpep_dropoff_datetime#205, passenger_count#206L, trip_distance#207, PULocationID#210, DOLocationID#211, payment_type#212L, fare_amount#213]
+
+(40) Filter [codegen id : 8]
+Input [8]: [tpep_pickup_datetime#204, tpep_dropoff_datetime#205, passenger_count#206L, trip_distance#207, PULocationID#210, DOLocationID#211, payment_type#212L, fare_amount#213]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#204) AND isnotnull(tpep_dropoff_datetime#205)) AND isnotnull(passenger_count#206L)) AND isnotnull(payment_type#212L)) AND isnotnull(try_cast(tpep_pickup_datetime#204 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#205 as timestamp))) AND isnotnull(try_cast(passenger_count#206L as int))) AND isnotnull(trip_distance#207)) AND NOT isnan(trip_distance#207)) AND isnotnull(PULocationID#210)) AND isnotnull(DOLocationID#211)) AND isnotnull(try_cast(payment_type#212L as int))) AND isnotnull(fare_amount#213)) AND NOT isnan(fare_amount#213)) AND NOT coalesce((fare_amount#213 <= 0.0), false)) AND NOT coalesce((trip_distance#207 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#206L as int) < 1) OR (try_cast(passenger_count#206L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#205 as timestamp) <= try_cast(tpep_pickup_datetime#204 as timestamp)), false)) AND NOT coalesce((((PULocationID#210 < 1) OR (PULocationID#210 > 263)) OR ((DOLocationID#211 < 1) OR (DOLocationID#211 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#204 as timestamp) as date)) = 2023), false))
+
+(41) Project [codegen id : 8]
+Output [8]: [try_cast(tpep_pickup_datetime#204 as timestamp) AS tpep_pickup_datetime#222, try_cast(tpep_dropoff_datetime#205 as timestamp) AS tpep_dropoff_datetime#223, try_cast(passenger_count#206L as int) AS passenger_count#224, trip_distance#207, PULocationID#210, DOLocationID#211, try_cast(payment_type#212L as int) AS payment_type#228, fare_amount#213]
+Input [8]: [tpep_pickup_datetime#204, tpep_dropoff_datetime#205, passenger_count#206L, trip_distance#207, PULocationID#210, DOLocationID#211, payment_type#212L, fare_amount#213]
+
+(42) Project [codegen id : 8]
+Output [15]: [tpep_pickup_datetime#222, tpep_dropoff_datetime#223, passenger_count#224, trip_distance#207, PULocationID#210, DOLocationID#211, payment_type#228, fare_amount#213, 2023 AS source_year#231, (trip_distance#207 * 1.609344) AS trip_distance_km#792, (cast((unix_timestamp(tpep_dropoff_datetime#223, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#222, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#793, year(cast(tpep_pickup_datetime#222 as date)) AS pickup_year#794, month(cast(tpep_pickup_datetime#222 as date)) AS pickup_month#795, dayofweek(cast(tpep_pickup_datetime#222 as date)) AS day_of_week#796, hour(tpep_pickup_datetime#222, Some(UTC)) AS hour_of_day#797]
+Input [8]: [tpep_pickup_datetime#222, tpep_dropoff_datetime#223, passenger_count#224, trip_distance#207, PULocationID#210, DOLocationID#211, payment_type#228, fare_amount#213]
+
+(43) Scan parquet 
+Output [8]: [tpep_pickup_datetime#233, tpep_dropoff_datetime#234, passenger_count#235L, trip_distance#236, PULocationID#239, DOLocationID#240, payment_type#241L, fare_amount#242]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2023/yellow_tripdata_2023-09.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(44) ColumnarToRow [codegen id : 9]
+Input [8]: [tpep_pickup_datetime#233, tpep_dropoff_datetime#234, passenger_count#235L, trip_distance#236, PULocationID#239, DOLocationID#240, payment_type#241L, fare_amount#242]
+
+(45) Filter [codegen id : 9]
+Input [8]: [tpep_pickup_datetime#233, tpep_dropoff_datetime#234, passenger_count#235L, trip_distance#236, PULocationID#239, DOLocationID#240, payment_type#241L, fare_amount#242]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#233) AND isnotnull(tpep_dropoff_datetime#234)) AND isnotnull(passenger_count#235L)) AND isnotnull(payment_type#241L)) AND isnotnull(try_cast(tpep_pickup_datetime#233 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#234 as timestamp))) AND isnotnull(try_cast(passenger_count#235L as int))) AND isnotnull(trip_distance#236)) AND NOT isnan(trip_distance#236)) AND isnotnull(PULocationID#239)) AND isnotnull(DOLocationID#240)) AND isnotnull(try_cast(payment_type#241L as int))) AND isnotnull(fare_amount#242)) AND NOT isnan(fare_amount#242)) AND NOT coalesce((fare_amount#242 <= 0.0), false)) AND NOT coalesce((trip_distance#236 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#235L as int) < 1) OR (try_cast(passenger_count#235L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#234 as timestamp) <= try_cast(tpep_pickup_datetime#233 as timestamp)), false)) AND NOT coalesce((((PULocationID#239 < 1) OR (PULocationID#239 > 263)) OR ((DOLocationID#240 < 1) OR (DOLocationID#240 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#233 as timestamp) as date)) = 2023), false))
+
+(46) Project [codegen id : 9]
+Output [8]: [try_cast(tpep_pickup_datetime#233 as timestamp) AS tpep_pickup_datetime#251, try_cast(tpep_dropoff_datetime#234 as timestamp) AS tpep_dropoff_datetime#252, try_cast(passenger_count#235L as int) AS passenger_count#253, trip_distance#236, PULocationID#239, DOLocationID#240, try_cast(payment_type#241L as int) AS payment_type#257, fare_amount#242]
+Input [8]: [tpep_pickup_datetime#233, tpep_dropoff_datetime#234, passenger_count#235L, trip_distance#236, PULocationID#239, DOLocationID#240, payment_type#241L, fare_amount#242]
+
+(47) Project [codegen id : 9]
+Output [15]: [tpep_pickup_datetime#251, tpep_dropoff_datetime#252, passenger_count#253, trip_distance#236, PULocationID#239, DOLocationID#240, payment_type#257, fare_amount#242, 2023 AS source_year#260, (trip_distance#236 * 1.609344) AS trip_distance_km#798, (cast((unix_timestamp(tpep_dropoff_datetime#252, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#251, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#799, year(cast(tpep_pickup_datetime#251 as date)) AS pickup_year#800, month(cast(tpep_pickup_datetime#251 as date)) AS pickup_month#801, dayofweek(cast(tpep_pickup_datetime#251 as date)) AS day_of_week#802, hour(tpep_pickup_datetime#251, Some(UTC)) AS hour_of_day#803]
+Input [8]: [tpep_pickup_datetime#251, tpep_dropoff_datetime#252, passenger_count#253, trip_distance#236, PULocationID#239, DOLocationID#240, payment_type#257, fare_amount#242]
+
+(48) Scan parquet 
+Output [8]: [tpep_pickup_datetime#262, tpep_dropoff_datetime#263, passenger_count#264L, trip_distance#265, PULocationID#268, DOLocationID#269, payment_type#270L, fare_amount#271]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2023/yellow_tripdata_2023-10.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(49) ColumnarToRow [codegen id : 10]
+Input [8]: [tpep_pickup_datetime#262, tpep_dropoff_datetime#263, passenger_count#264L, trip_distance#265, PULocationID#268, DOLocationID#269, payment_type#270L, fare_amount#271]
+
+(50) Filter [codegen id : 10]
+Input [8]: [tpep_pickup_datetime#262, tpep_dropoff_datetime#263, passenger_count#264L, trip_distance#265, PULocationID#268, DOLocationID#269, payment_type#270L, fare_amount#271]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#262) AND isnotnull(tpep_dropoff_datetime#263)) AND isnotnull(passenger_count#264L)) AND isnotnull(payment_type#270L)) AND isnotnull(try_cast(tpep_pickup_datetime#262 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#263 as timestamp))) AND isnotnull(try_cast(passenger_count#264L as int))) AND isnotnull(trip_distance#265)) AND NOT isnan(trip_distance#265)) AND isnotnull(PULocationID#268)) AND isnotnull(DOLocationID#269)) AND isnotnull(try_cast(payment_type#270L as int))) AND isnotnull(fare_amount#271)) AND NOT isnan(fare_amount#271)) AND NOT coalesce((fare_amount#271 <= 0.0), false)) AND NOT coalesce((trip_distance#265 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#264L as int) < 1) OR (try_cast(passenger_count#264L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#263 as timestamp) <= try_cast(tpep_pickup_datetime#262 as timestamp)), false)) AND NOT coalesce((((PULocationID#268 < 1) OR (PULocationID#268 > 263)) OR ((DOLocationID#269 < 1) OR (DOLocationID#269 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#262 as timestamp) as date)) = 2023), false))
+
+(51) Project [codegen id : 10]
+Output [8]: [try_cast(tpep_pickup_datetime#262 as timestamp) AS tpep_pickup_datetime#280, try_cast(tpep_dropoff_datetime#263 as timestamp) AS tpep_dropoff_datetime#281, try_cast(passenger_count#264L as int) AS passenger_count#282, trip_distance#265, PULocationID#268, DOLocationID#269, try_cast(payment_type#270L as int) AS payment_type#286, fare_amount#271]
+Input [8]: [tpep_pickup_datetime#262, tpep_dropoff_datetime#263, passenger_count#264L, trip_distance#265, PULocationID#268, DOLocationID#269, payment_type#270L, fare_amount#271]
+
+(52) Project [codegen id : 10]
+Output [15]: [tpep_pickup_datetime#280, tpep_dropoff_datetime#281, passenger_count#282, trip_distance#265, PULocationID#268, DOLocationID#269, payment_type#286, fare_amount#271, 2023 AS source_year#289, (trip_distance#265 * 1.609344) AS trip_distance_km#804, (cast((unix_timestamp(tpep_dropoff_datetime#281, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#280, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#805, year(cast(tpep_pickup_datetime#280 as date)) AS pickup_year#806, month(cast(tpep_pickup_datetime#280 as date)) AS pickup_month#807, dayofweek(cast(tpep_pickup_datetime#280 as date)) AS day_of_week#808, hour(tpep_pickup_datetime#280, Some(UTC)) AS hour_of_day#809]
+Input [8]: [tpep_pickup_datetime#280, tpep_dropoff_datetime#281, passenger_count#282, trip_distance#265, PULocationID#268, DOLocationID#269, payment_type#286, fare_amount#271]
+
+(53) Scan parquet 
+Output [8]: [tpep_pickup_datetime#291, tpep_dropoff_datetime#292, passenger_count#293L, trip_distance#294, PULocationID#297, DOLocationID#298, payment_type#299L, fare_amount#300]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2023/yellow_tripdata_2023-11.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(54) ColumnarToRow [codegen id : 11]
+Input [8]: [tpep_pickup_datetime#291, tpep_dropoff_datetime#292, passenger_count#293L, trip_distance#294, PULocationID#297, DOLocationID#298, payment_type#299L, fare_amount#300]
+
+(55) Filter [codegen id : 11]
+Input [8]: [tpep_pickup_datetime#291, tpep_dropoff_datetime#292, passenger_count#293L, trip_distance#294, PULocationID#297, DOLocationID#298, payment_type#299L, fare_amount#300]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#291) AND isnotnull(tpep_dropoff_datetime#292)) AND isnotnull(passenger_count#293L)) AND isnotnull(payment_type#299L)) AND isnotnull(try_cast(tpep_pickup_datetime#291 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#292 as timestamp))) AND isnotnull(try_cast(passenger_count#293L as int))) AND isnotnull(trip_distance#294)) AND NOT isnan(trip_distance#294)) AND isnotnull(PULocationID#297)) AND isnotnull(DOLocationID#298)) AND isnotnull(try_cast(payment_type#299L as int))) AND isnotnull(fare_amount#300)) AND NOT isnan(fare_amount#300)) AND NOT coalesce((fare_amount#300 <= 0.0), false)) AND NOT coalesce((trip_distance#294 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#293L as int) < 1) OR (try_cast(passenger_count#293L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#292 as timestamp) <= try_cast(tpep_pickup_datetime#291 as timestamp)), false)) AND NOT coalesce((((PULocationID#297 < 1) OR (PULocationID#297 > 263)) OR ((DOLocationID#298 < 1) OR (DOLocationID#298 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#291 as timestamp) as date)) = 2023), false))
+
+(56) Project [codegen id : 11]
+Output [8]: [try_cast(tpep_pickup_datetime#291 as timestamp) AS tpep_pickup_datetime#309, try_cast(tpep_dropoff_datetime#292 as timestamp) AS tpep_dropoff_datetime#310, try_cast(passenger_count#293L as int) AS passenger_count#311, trip_distance#294, PULocationID#297, DOLocationID#298, try_cast(payment_type#299L as int) AS payment_type#315, fare_amount#300]
+Input [8]: [tpep_pickup_datetime#291, tpep_dropoff_datetime#292, passenger_count#293L, trip_distance#294, PULocationID#297, DOLocationID#298, payment_type#299L, fare_amount#300]
+
+(57) Project [codegen id : 11]
+Output [15]: [tpep_pickup_datetime#309, tpep_dropoff_datetime#310, passenger_count#311, trip_distance#294, PULocationID#297, DOLocationID#298, payment_type#315, fare_amount#300, 2023 AS source_year#318, (trip_distance#294 * 1.609344) AS trip_distance_km#810, (cast((unix_timestamp(tpep_dropoff_datetime#310, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#309, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#811, year(cast(tpep_pickup_datetime#309 as date)) AS pickup_year#812, month(cast(tpep_pickup_datetime#309 as date)) AS pickup_month#813, dayofweek(cast(tpep_pickup_datetime#309 as date)) AS day_of_week#814, hour(tpep_pickup_datetime#309, Some(UTC)) AS hour_of_day#815]
+Input [8]: [tpep_pickup_datetime#309, tpep_dropoff_datetime#310, passenger_count#311, trip_distance#294, PULocationID#297, DOLocationID#298, payment_type#315, fare_amount#300]
+
+(58) Scan parquet 
+Output [8]: [tpep_pickup_datetime#320, tpep_dropoff_datetime#321, passenger_count#322L, trip_distance#323, PULocationID#326, DOLocationID#327, payment_type#328L, fare_amount#329]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2023/yellow_tripdata_2023-12.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(59) ColumnarToRow [codegen id : 12]
+Input [8]: [tpep_pickup_datetime#320, tpep_dropoff_datetime#321, passenger_count#322L, trip_distance#323, PULocationID#326, DOLocationID#327, payment_type#328L, fare_amount#329]
+
+(60) Filter [codegen id : 12]
+Input [8]: [tpep_pickup_datetime#320, tpep_dropoff_datetime#321, passenger_count#322L, trip_distance#323, PULocationID#326, DOLocationID#327, payment_type#328L, fare_amount#329]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#320) AND isnotnull(tpep_dropoff_datetime#321)) AND isnotnull(passenger_count#322L)) AND isnotnull(payment_type#328L)) AND isnotnull(try_cast(tpep_pickup_datetime#320 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#321 as timestamp))) AND isnotnull(try_cast(passenger_count#322L as int))) AND isnotnull(trip_distance#323)) AND NOT isnan(trip_distance#323)) AND isnotnull(PULocationID#326)) AND isnotnull(DOLocationID#327)) AND isnotnull(try_cast(payment_type#328L as int))) AND isnotnull(fare_amount#329)) AND NOT isnan(fare_amount#329)) AND NOT coalesce((fare_amount#329 <= 0.0), false)) AND NOT coalesce((trip_distance#323 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#322L as int) < 1) OR (try_cast(passenger_count#322L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#321 as timestamp) <= try_cast(tpep_pickup_datetime#320 as timestamp)), false)) AND NOT coalesce((((PULocationID#326 < 1) OR (PULocationID#326 > 263)) OR ((DOLocationID#327 < 1) OR (DOLocationID#327 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#320 as timestamp) as date)) = 2023), false))
+
+(61) Project [codegen id : 12]
+Output [8]: [try_cast(tpep_pickup_datetime#320 as timestamp) AS tpep_pickup_datetime#338, try_cast(tpep_dropoff_datetime#321 as timestamp) AS tpep_dropoff_datetime#339, try_cast(passenger_count#322L as int) AS passenger_count#340, trip_distance#323, PULocationID#326, DOLocationID#327, try_cast(payment_type#328L as int) AS payment_type#344, fare_amount#329]
+Input [8]: [tpep_pickup_datetime#320, tpep_dropoff_datetime#321, passenger_count#322L, trip_distance#323, PULocationID#326, DOLocationID#327, payment_type#328L, fare_amount#329]
+
+(62) Project [codegen id : 12]
+Output [15]: [tpep_pickup_datetime#338, tpep_dropoff_datetime#339, passenger_count#340, trip_distance#323, PULocationID#326, DOLocationID#327, payment_type#344, fare_amount#329, 2023 AS source_year#347, (trip_distance#323 * 1.609344) AS trip_distance_km#816, (cast((unix_timestamp(tpep_dropoff_datetime#339, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#338, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#817, year(cast(tpep_pickup_datetime#338 as date)) AS pickup_year#818, month(cast(tpep_pickup_datetime#338 as date)) AS pickup_month#819, dayofweek(cast(tpep_pickup_datetime#338 as date)) AS day_of_week#820, hour(tpep_pickup_datetime#338, Some(UTC)) AS hour_of_day#821]
+Input [8]: [tpep_pickup_datetime#338, tpep_dropoff_datetime#339, passenger_count#340, trip_distance#323, PULocationID#326, DOLocationID#327, payment_type#344, fare_amount#329]
+
+(63) Scan parquet 
+Output [8]: [tpep_pickup_datetime#349, tpep_dropoff_datetime#350, passenger_count#351L, trip_distance#352, PULocationID#355, DOLocationID#356, payment_type#357L, fare_amount#358]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2024/yellow_tripdata_2024-01.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(64) ColumnarToRow [codegen id : 13]
+Input [8]: [tpep_pickup_datetime#349, tpep_dropoff_datetime#350, passenger_count#351L, trip_distance#352, PULocationID#355, DOLocationID#356, payment_type#357L, fare_amount#358]
+
+(65) Filter [codegen id : 13]
+Input [8]: [tpep_pickup_datetime#349, tpep_dropoff_datetime#350, passenger_count#351L, trip_distance#352, PULocationID#355, DOLocationID#356, payment_type#357L, fare_amount#358]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#349) AND isnotnull(tpep_dropoff_datetime#350)) AND isnotnull(passenger_count#351L)) AND isnotnull(payment_type#357L)) AND isnotnull(try_cast(tpep_pickup_datetime#349 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#350 as timestamp))) AND isnotnull(try_cast(passenger_count#351L as int))) AND isnotnull(trip_distance#352)) AND NOT isnan(trip_distance#352)) AND isnotnull(PULocationID#355)) AND isnotnull(DOLocationID#356)) AND isnotnull(try_cast(payment_type#357L as int))) AND isnotnull(fare_amount#358)) AND NOT isnan(fare_amount#358)) AND NOT coalesce((fare_amount#358 <= 0.0), false)) AND NOT coalesce((trip_distance#352 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#351L as int) < 1) OR (try_cast(passenger_count#351L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#350 as timestamp) <= try_cast(tpep_pickup_datetime#349 as timestamp)), false)) AND NOT coalesce((((PULocationID#355 < 1) OR (PULocationID#355 > 263)) OR ((DOLocationID#356 < 1) OR (DOLocationID#356 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#349 as timestamp) as date)) = 2024), false))
+
+(66) Project [codegen id : 13]
+Output [8]: [try_cast(tpep_pickup_datetime#349 as timestamp) AS tpep_pickup_datetime#367, try_cast(tpep_dropoff_datetime#350 as timestamp) AS tpep_dropoff_datetime#368, try_cast(passenger_count#351L as int) AS passenger_count#369, trip_distance#352, PULocationID#355, DOLocationID#356, try_cast(payment_type#357L as int) AS payment_type#373, fare_amount#358]
+Input [8]: [tpep_pickup_datetime#349, tpep_dropoff_datetime#350, passenger_count#351L, trip_distance#352, PULocationID#355, DOLocationID#356, payment_type#357L, fare_amount#358]
+
+(67) Project [codegen id : 13]
+Output [15]: [tpep_pickup_datetime#367, tpep_dropoff_datetime#368, passenger_count#369, trip_distance#352, PULocationID#355, DOLocationID#356, payment_type#373, fare_amount#358, 2024 AS source_year#376, (trip_distance#352 * 1.609344) AS trip_distance_km#822, (cast((unix_timestamp(tpep_dropoff_datetime#368, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#367, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#823, year(cast(tpep_pickup_datetime#367 as date)) AS pickup_year#824, month(cast(tpep_pickup_datetime#367 as date)) AS pickup_month#825, dayofweek(cast(tpep_pickup_datetime#367 as date)) AS day_of_week#826, hour(tpep_pickup_datetime#367, Some(UTC)) AS hour_of_day#827]
+Input [8]: [tpep_pickup_datetime#367, tpep_dropoff_datetime#368, passenger_count#369, trip_distance#352, PULocationID#355, DOLocationID#356, payment_type#373, fare_amount#358]
+
+(68) Scan parquet 
+Output [8]: [tpep_pickup_datetime#378, tpep_dropoff_datetime#379, passenger_count#380L, trip_distance#381, PULocationID#384, DOLocationID#385, payment_type#386L, fare_amount#387]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2024/yellow_tripdata_2024-02.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(69) ColumnarToRow [codegen id : 14]
+Input [8]: [tpep_pickup_datetime#378, tpep_dropoff_datetime#379, passenger_count#380L, trip_distance#381, PULocationID#384, DOLocationID#385, payment_type#386L, fare_amount#387]
+
+(70) Filter [codegen id : 14]
+Input [8]: [tpep_pickup_datetime#378, tpep_dropoff_datetime#379, passenger_count#380L, trip_distance#381, PULocationID#384, DOLocationID#385, payment_type#386L, fare_amount#387]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#378) AND isnotnull(tpep_dropoff_datetime#379)) AND isnotnull(passenger_count#380L)) AND isnotnull(payment_type#386L)) AND isnotnull(try_cast(tpep_pickup_datetime#378 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#379 as timestamp))) AND isnotnull(try_cast(passenger_count#380L as int))) AND isnotnull(trip_distance#381)) AND NOT isnan(trip_distance#381)) AND isnotnull(PULocationID#384)) AND isnotnull(DOLocationID#385)) AND isnotnull(try_cast(payment_type#386L as int))) AND isnotnull(fare_amount#387)) AND NOT isnan(fare_amount#387)) AND NOT coalesce((fare_amount#387 <= 0.0), false)) AND NOT coalesce((trip_distance#381 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#380L as int) < 1) OR (try_cast(passenger_count#380L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#379 as timestamp) <= try_cast(tpep_pickup_datetime#378 as timestamp)), false)) AND NOT coalesce((((PULocationID#384 < 1) OR (PULocationID#384 > 263)) OR ((DOLocationID#385 < 1) OR (DOLocationID#385 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#378 as timestamp) as date)) = 2024), false))
+
+(71) Project [codegen id : 14]
+Output [8]: [try_cast(tpep_pickup_datetime#378 as timestamp) AS tpep_pickup_datetime#396, try_cast(tpep_dropoff_datetime#379 as timestamp) AS tpep_dropoff_datetime#397, try_cast(passenger_count#380L as int) AS passenger_count#398, trip_distance#381, PULocationID#384, DOLocationID#385, try_cast(payment_type#386L as int) AS payment_type#402, fare_amount#387]
+Input [8]: [tpep_pickup_datetime#378, tpep_dropoff_datetime#379, passenger_count#380L, trip_distance#381, PULocationID#384, DOLocationID#385, payment_type#386L, fare_amount#387]
+
+(72) Project [codegen id : 14]
+Output [15]: [tpep_pickup_datetime#396, tpep_dropoff_datetime#397, passenger_count#398, trip_distance#381, PULocationID#384, DOLocationID#385, payment_type#402, fare_amount#387, 2024 AS source_year#405, (trip_distance#381 * 1.609344) AS trip_distance_km#828, (cast((unix_timestamp(tpep_dropoff_datetime#397, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#396, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#829, year(cast(tpep_pickup_datetime#396 as date)) AS pickup_year#830, month(cast(tpep_pickup_datetime#396 as date)) AS pickup_month#831, dayofweek(cast(tpep_pickup_datetime#396 as date)) AS day_of_week#832, hour(tpep_pickup_datetime#396, Some(UTC)) AS hour_of_day#833]
+Input [8]: [tpep_pickup_datetime#396, tpep_dropoff_datetime#397, passenger_count#398, trip_distance#381, PULocationID#384, DOLocationID#385, payment_type#402, fare_amount#387]
+
+(73) Scan parquet 
+Output [8]: [tpep_pickup_datetime#407, tpep_dropoff_datetime#408, passenger_count#409L, trip_distance#410, PULocationID#413, DOLocationID#414, payment_type#415L, fare_amount#416]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2024/yellow_tripdata_2024-03.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(74) ColumnarToRow [codegen id : 15]
+Input [8]: [tpep_pickup_datetime#407, tpep_dropoff_datetime#408, passenger_count#409L, trip_distance#410, PULocationID#413, DOLocationID#414, payment_type#415L, fare_amount#416]
+
+(75) Filter [codegen id : 15]
+Input [8]: [tpep_pickup_datetime#407, tpep_dropoff_datetime#408, passenger_count#409L, trip_distance#410, PULocationID#413, DOLocationID#414, payment_type#415L, fare_amount#416]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#407) AND isnotnull(tpep_dropoff_datetime#408)) AND isnotnull(passenger_count#409L)) AND isnotnull(payment_type#415L)) AND isnotnull(try_cast(tpep_pickup_datetime#407 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#408 as timestamp))) AND isnotnull(try_cast(passenger_count#409L as int))) AND isnotnull(trip_distance#410)) AND NOT isnan(trip_distance#410)) AND isnotnull(PULocationID#413)) AND isnotnull(DOLocationID#414)) AND isnotnull(try_cast(payment_type#415L as int))) AND isnotnull(fare_amount#416)) AND NOT isnan(fare_amount#416)) AND NOT coalesce((fare_amount#416 <= 0.0), false)) AND NOT coalesce((trip_distance#410 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#409L as int) < 1) OR (try_cast(passenger_count#409L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#408 as timestamp) <= try_cast(tpep_pickup_datetime#407 as timestamp)), false)) AND NOT coalesce((((PULocationID#413 < 1) OR (PULocationID#413 > 263)) OR ((DOLocationID#414 < 1) OR (DOLocationID#414 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#407 as timestamp) as date)) = 2024), false))
+
+(76) Project [codegen id : 15]
+Output [8]: [try_cast(tpep_pickup_datetime#407 as timestamp) AS tpep_pickup_datetime#425, try_cast(tpep_dropoff_datetime#408 as timestamp) AS tpep_dropoff_datetime#426, try_cast(passenger_count#409L as int) AS passenger_count#427, trip_distance#410, PULocationID#413, DOLocationID#414, try_cast(payment_type#415L as int) AS payment_type#431, fare_amount#416]
+Input [8]: [tpep_pickup_datetime#407, tpep_dropoff_datetime#408, passenger_count#409L, trip_distance#410, PULocationID#413, DOLocationID#414, payment_type#415L, fare_amount#416]
+
+(77) Project [codegen id : 15]
+Output [15]: [tpep_pickup_datetime#425, tpep_dropoff_datetime#426, passenger_count#427, trip_distance#410, PULocationID#413, DOLocationID#414, payment_type#431, fare_amount#416, 2024 AS source_year#434, (trip_distance#410 * 1.609344) AS trip_distance_km#834, (cast((unix_timestamp(tpep_dropoff_datetime#426, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#425, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#835, year(cast(tpep_pickup_datetime#425 as date)) AS pickup_year#836, month(cast(tpep_pickup_datetime#425 as date)) AS pickup_month#837, dayofweek(cast(tpep_pickup_datetime#425 as date)) AS day_of_week#838, hour(tpep_pickup_datetime#425, Some(UTC)) AS hour_of_day#839]
+Input [8]: [tpep_pickup_datetime#425, tpep_dropoff_datetime#426, passenger_count#427, trip_distance#410, PULocationID#413, DOLocationID#414, payment_type#431, fare_amount#416]
+
+(78) Scan parquet 
+Output [8]: [tpep_pickup_datetime#436, tpep_dropoff_datetime#437, passenger_count#438L, trip_distance#439, PULocationID#442, DOLocationID#443, payment_type#444L, fare_amount#445]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2024/yellow_tripdata_2024-04.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(79) ColumnarToRow [codegen id : 16]
+Input [8]: [tpep_pickup_datetime#436, tpep_dropoff_datetime#437, passenger_count#438L, trip_distance#439, PULocationID#442, DOLocationID#443, payment_type#444L, fare_amount#445]
+
+(80) Filter [codegen id : 16]
+Input [8]: [tpep_pickup_datetime#436, tpep_dropoff_datetime#437, passenger_count#438L, trip_distance#439, PULocationID#442, DOLocationID#443, payment_type#444L, fare_amount#445]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#436) AND isnotnull(tpep_dropoff_datetime#437)) AND isnotnull(passenger_count#438L)) AND isnotnull(payment_type#444L)) AND isnotnull(try_cast(tpep_pickup_datetime#436 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#437 as timestamp))) AND isnotnull(try_cast(passenger_count#438L as int))) AND isnotnull(trip_distance#439)) AND NOT isnan(trip_distance#439)) AND isnotnull(PULocationID#442)) AND isnotnull(DOLocationID#443)) AND isnotnull(try_cast(payment_type#444L as int))) AND isnotnull(fare_amount#445)) AND NOT isnan(fare_amount#445)) AND NOT coalesce((fare_amount#445 <= 0.0), false)) AND NOT coalesce((trip_distance#439 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#438L as int) < 1) OR (try_cast(passenger_count#438L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#437 as timestamp) <= try_cast(tpep_pickup_datetime#436 as timestamp)), false)) AND NOT coalesce((((PULocationID#442 < 1) OR (PULocationID#442 > 263)) OR ((DOLocationID#443 < 1) OR (DOLocationID#443 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#436 as timestamp) as date)) = 2024), false))
+
+(81) Project [codegen id : 16]
+Output [8]: [try_cast(tpep_pickup_datetime#436 as timestamp) AS tpep_pickup_datetime#454, try_cast(tpep_dropoff_datetime#437 as timestamp) AS tpep_dropoff_datetime#455, try_cast(passenger_count#438L as int) AS passenger_count#456, trip_distance#439, PULocationID#442, DOLocationID#443, try_cast(payment_type#444L as int) AS payment_type#460, fare_amount#445]
+Input [8]: [tpep_pickup_datetime#436, tpep_dropoff_datetime#437, passenger_count#438L, trip_distance#439, PULocationID#442, DOLocationID#443, payment_type#444L, fare_amount#445]
+
+(82) Project [codegen id : 16]
+Output [15]: [tpep_pickup_datetime#454, tpep_dropoff_datetime#455, passenger_count#456, trip_distance#439, PULocationID#442, DOLocationID#443, payment_type#460, fare_amount#445, 2024 AS source_year#463, (trip_distance#439 * 1.609344) AS trip_distance_km#840, (cast((unix_timestamp(tpep_dropoff_datetime#455, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#454, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#841, year(cast(tpep_pickup_datetime#454 as date)) AS pickup_year#842, month(cast(tpep_pickup_datetime#454 as date)) AS pickup_month#843, dayofweek(cast(tpep_pickup_datetime#454 as date)) AS day_of_week#844, hour(tpep_pickup_datetime#454, Some(UTC)) AS hour_of_day#845]
+Input [8]: [tpep_pickup_datetime#454, tpep_dropoff_datetime#455, passenger_count#456, trip_distance#439, PULocationID#442, DOLocationID#443, payment_type#460, fare_amount#445]
+
+(83) Scan parquet 
+Output [8]: [tpep_pickup_datetime#465, tpep_dropoff_datetime#466, passenger_count#467L, trip_distance#468, PULocationID#471, DOLocationID#472, payment_type#473L, fare_amount#474]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2024/yellow_tripdata_2024-05.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(84) ColumnarToRow [codegen id : 17]
+Input [8]: [tpep_pickup_datetime#465, tpep_dropoff_datetime#466, passenger_count#467L, trip_distance#468, PULocationID#471, DOLocationID#472, payment_type#473L, fare_amount#474]
+
+(85) Filter [codegen id : 17]
+Input [8]: [tpep_pickup_datetime#465, tpep_dropoff_datetime#466, passenger_count#467L, trip_distance#468, PULocationID#471, DOLocationID#472, payment_type#473L, fare_amount#474]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#465) AND isnotnull(tpep_dropoff_datetime#466)) AND isnotnull(passenger_count#467L)) AND isnotnull(payment_type#473L)) AND isnotnull(try_cast(tpep_pickup_datetime#465 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#466 as timestamp))) AND isnotnull(try_cast(passenger_count#467L as int))) AND isnotnull(trip_distance#468)) AND NOT isnan(trip_distance#468)) AND isnotnull(PULocationID#471)) AND isnotnull(DOLocationID#472)) AND isnotnull(try_cast(payment_type#473L as int))) AND isnotnull(fare_amount#474)) AND NOT isnan(fare_amount#474)) AND NOT coalesce((fare_amount#474 <= 0.0), false)) AND NOT coalesce((trip_distance#468 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#467L as int) < 1) OR (try_cast(passenger_count#467L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#466 as timestamp) <= try_cast(tpep_pickup_datetime#465 as timestamp)), false)) AND NOT coalesce((((PULocationID#471 < 1) OR (PULocationID#471 > 263)) OR ((DOLocationID#472 < 1) OR (DOLocationID#472 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#465 as timestamp) as date)) = 2024), false))
+
+(86) Project [codegen id : 17]
+Output [8]: [try_cast(tpep_pickup_datetime#465 as timestamp) AS tpep_pickup_datetime#483, try_cast(tpep_dropoff_datetime#466 as timestamp) AS tpep_dropoff_datetime#484, try_cast(passenger_count#467L as int) AS passenger_count#485, trip_distance#468, PULocationID#471, DOLocationID#472, try_cast(payment_type#473L as int) AS payment_type#489, fare_amount#474]
+Input [8]: [tpep_pickup_datetime#465, tpep_dropoff_datetime#466, passenger_count#467L, trip_distance#468, PULocationID#471, DOLocationID#472, payment_type#473L, fare_amount#474]
+
+(87) Project [codegen id : 17]
+Output [15]: [tpep_pickup_datetime#483, tpep_dropoff_datetime#484, passenger_count#485, trip_distance#468, PULocationID#471, DOLocationID#472, payment_type#489, fare_amount#474, 2024 AS source_year#492, (trip_distance#468 * 1.609344) AS trip_distance_km#846, (cast((unix_timestamp(tpep_dropoff_datetime#484, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#483, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#847, year(cast(tpep_pickup_datetime#483 as date)) AS pickup_year#848, month(cast(tpep_pickup_datetime#483 as date)) AS pickup_month#849, dayofweek(cast(tpep_pickup_datetime#483 as date)) AS day_of_week#850, hour(tpep_pickup_datetime#483, Some(UTC)) AS hour_of_day#851]
+Input [8]: [tpep_pickup_datetime#483, tpep_dropoff_datetime#484, passenger_count#485, trip_distance#468, PULocationID#471, DOLocationID#472, payment_type#489, fare_amount#474]
+
+(88) Scan parquet 
+Output [8]: [tpep_pickup_datetime#494, tpep_dropoff_datetime#495, passenger_count#496L, trip_distance#497, PULocationID#500, DOLocationID#501, payment_type#502L, fare_amount#503]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2024/yellow_tripdata_2024-06.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(89) ColumnarToRow [codegen id : 18]
+Input [8]: [tpep_pickup_datetime#494, tpep_dropoff_datetime#495, passenger_count#496L, trip_distance#497, PULocationID#500, DOLocationID#501, payment_type#502L, fare_amount#503]
+
+(90) Filter [codegen id : 18]
+Input [8]: [tpep_pickup_datetime#494, tpep_dropoff_datetime#495, passenger_count#496L, trip_distance#497, PULocationID#500, DOLocationID#501, payment_type#502L, fare_amount#503]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#494) AND isnotnull(tpep_dropoff_datetime#495)) AND isnotnull(passenger_count#496L)) AND isnotnull(payment_type#502L)) AND isnotnull(try_cast(tpep_pickup_datetime#494 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#495 as timestamp))) AND isnotnull(try_cast(passenger_count#496L as int))) AND isnotnull(trip_distance#497)) AND NOT isnan(trip_distance#497)) AND isnotnull(PULocationID#500)) AND isnotnull(DOLocationID#501)) AND isnotnull(try_cast(payment_type#502L as int))) AND isnotnull(fare_amount#503)) AND NOT isnan(fare_amount#503)) AND NOT coalesce((fare_amount#503 <= 0.0), false)) AND NOT coalesce((trip_distance#497 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#496L as int) < 1) OR (try_cast(passenger_count#496L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#495 as timestamp) <= try_cast(tpep_pickup_datetime#494 as timestamp)), false)) AND NOT coalesce((((PULocationID#500 < 1) OR (PULocationID#500 > 263)) OR ((DOLocationID#501 < 1) OR (DOLocationID#501 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#494 as timestamp) as date)) = 2024), false))
+
+(91) Project [codegen id : 18]
+Output [8]: [try_cast(tpep_pickup_datetime#494 as timestamp) AS tpep_pickup_datetime#512, try_cast(tpep_dropoff_datetime#495 as timestamp) AS tpep_dropoff_datetime#513, try_cast(passenger_count#496L as int) AS passenger_count#514, trip_distance#497, PULocationID#500, DOLocationID#501, try_cast(payment_type#502L as int) AS payment_type#518, fare_amount#503]
+Input [8]: [tpep_pickup_datetime#494, tpep_dropoff_datetime#495, passenger_count#496L, trip_distance#497, PULocationID#500, DOLocationID#501, payment_type#502L, fare_amount#503]
+
+(92) Project [codegen id : 18]
+Output [15]: [tpep_pickup_datetime#512, tpep_dropoff_datetime#513, passenger_count#514, trip_distance#497, PULocationID#500, DOLocationID#501, payment_type#518, fare_amount#503, 2024 AS source_year#521, (trip_distance#497 * 1.609344) AS trip_distance_km#852, (cast((unix_timestamp(tpep_dropoff_datetime#513, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#512, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#853, year(cast(tpep_pickup_datetime#512 as date)) AS pickup_year#854, month(cast(tpep_pickup_datetime#512 as date)) AS pickup_month#855, dayofweek(cast(tpep_pickup_datetime#512 as date)) AS day_of_week#856, hour(tpep_pickup_datetime#512, Some(UTC)) AS hour_of_day#857]
+Input [8]: [tpep_pickup_datetime#512, tpep_dropoff_datetime#513, passenger_count#514, trip_distance#497, PULocationID#500, DOLocationID#501, payment_type#518, fare_amount#503]
+
+(93) Scan parquet 
+Output [8]: [tpep_pickup_datetime#523, tpep_dropoff_datetime#524, passenger_count#525L, trip_distance#526, PULocationID#529, DOLocationID#530, payment_type#531L, fare_amount#532]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2024/yellow_tripdata_2024-07.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(94) ColumnarToRow [codegen id : 19]
+Input [8]: [tpep_pickup_datetime#523, tpep_dropoff_datetime#524, passenger_count#525L, trip_distance#526, PULocationID#529, DOLocationID#530, payment_type#531L, fare_amount#532]
+
+(95) Filter [codegen id : 19]
+Input [8]: [tpep_pickup_datetime#523, tpep_dropoff_datetime#524, passenger_count#525L, trip_distance#526, PULocationID#529, DOLocationID#530, payment_type#531L, fare_amount#532]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#523) AND isnotnull(tpep_dropoff_datetime#524)) AND isnotnull(passenger_count#525L)) AND isnotnull(payment_type#531L)) AND isnotnull(try_cast(tpep_pickup_datetime#523 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#524 as timestamp))) AND isnotnull(try_cast(passenger_count#525L as int))) AND isnotnull(trip_distance#526)) AND NOT isnan(trip_distance#526)) AND isnotnull(PULocationID#529)) AND isnotnull(DOLocationID#530)) AND isnotnull(try_cast(payment_type#531L as int))) AND isnotnull(fare_amount#532)) AND NOT isnan(fare_amount#532)) AND NOT coalesce((fare_amount#532 <= 0.0), false)) AND NOT coalesce((trip_distance#526 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#525L as int) < 1) OR (try_cast(passenger_count#525L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#524 as timestamp) <= try_cast(tpep_pickup_datetime#523 as timestamp)), false)) AND NOT coalesce((((PULocationID#529 < 1) OR (PULocationID#529 > 263)) OR ((DOLocationID#530 < 1) OR (DOLocationID#530 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#523 as timestamp) as date)) = 2024), false))
+
+(96) Project [codegen id : 19]
+Output [8]: [try_cast(tpep_pickup_datetime#523 as timestamp) AS tpep_pickup_datetime#541, try_cast(tpep_dropoff_datetime#524 as timestamp) AS tpep_dropoff_datetime#542, try_cast(passenger_count#525L as int) AS passenger_count#543, trip_distance#526, PULocationID#529, DOLocationID#530, try_cast(payment_type#531L as int) AS payment_type#547, fare_amount#532]
+Input [8]: [tpep_pickup_datetime#523, tpep_dropoff_datetime#524, passenger_count#525L, trip_distance#526, PULocationID#529, DOLocationID#530, payment_type#531L, fare_amount#532]
+
+(97) Project [codegen id : 19]
+Output [15]: [tpep_pickup_datetime#541, tpep_dropoff_datetime#542, passenger_count#543, trip_distance#526, PULocationID#529, DOLocationID#530, payment_type#547, fare_amount#532, 2024 AS source_year#550, (trip_distance#526 * 1.609344) AS trip_distance_km#858, (cast((unix_timestamp(tpep_dropoff_datetime#542, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#541, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#859, year(cast(tpep_pickup_datetime#541 as date)) AS pickup_year#860, month(cast(tpep_pickup_datetime#541 as date)) AS pickup_month#861, dayofweek(cast(tpep_pickup_datetime#541 as date)) AS day_of_week#862, hour(tpep_pickup_datetime#541, Some(UTC)) AS hour_of_day#863]
+Input [8]: [tpep_pickup_datetime#541, tpep_dropoff_datetime#542, passenger_count#543, trip_distance#526, PULocationID#529, DOLocationID#530, payment_type#547, fare_amount#532]
+
+(98) Scan parquet 
+Output [8]: [tpep_pickup_datetime#552, tpep_dropoff_datetime#553, passenger_count#554L, trip_distance#555, PULocationID#558, DOLocationID#559, payment_type#560L, fare_amount#561]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2024/yellow_tripdata_2024-08.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(99) ColumnarToRow [codegen id : 20]
+Input [8]: [tpep_pickup_datetime#552, tpep_dropoff_datetime#553, passenger_count#554L, trip_distance#555, PULocationID#558, DOLocationID#559, payment_type#560L, fare_amount#561]
+
+(100) Filter [codegen id : 20]
+Input [8]: [tpep_pickup_datetime#552, tpep_dropoff_datetime#553, passenger_count#554L, trip_distance#555, PULocationID#558, DOLocationID#559, payment_type#560L, fare_amount#561]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#552) AND isnotnull(tpep_dropoff_datetime#553)) AND isnotnull(passenger_count#554L)) AND isnotnull(payment_type#560L)) AND isnotnull(try_cast(tpep_pickup_datetime#552 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#553 as timestamp))) AND isnotnull(try_cast(passenger_count#554L as int))) AND isnotnull(trip_distance#555)) AND NOT isnan(trip_distance#555)) AND isnotnull(PULocationID#558)) AND isnotnull(DOLocationID#559)) AND isnotnull(try_cast(payment_type#560L as int))) AND isnotnull(fare_amount#561)) AND NOT isnan(fare_amount#561)) AND NOT coalesce((fare_amount#561 <= 0.0), false)) AND NOT coalesce((trip_distance#555 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#554L as int) < 1) OR (try_cast(passenger_count#554L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#553 as timestamp) <= try_cast(tpep_pickup_datetime#552 as timestamp)), false)) AND NOT coalesce((((PULocationID#558 < 1) OR (PULocationID#558 > 263)) OR ((DOLocationID#559 < 1) OR (DOLocationID#559 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#552 as timestamp) as date)) = 2024), false))
+
+(101) Project [codegen id : 20]
+Output [8]: [try_cast(tpep_pickup_datetime#552 as timestamp) AS tpep_pickup_datetime#570, try_cast(tpep_dropoff_datetime#553 as timestamp) AS tpep_dropoff_datetime#571, try_cast(passenger_count#554L as int) AS passenger_count#572, trip_distance#555, PULocationID#558, DOLocationID#559, try_cast(payment_type#560L as int) AS payment_type#576, fare_amount#561]
+Input [8]: [tpep_pickup_datetime#552, tpep_dropoff_datetime#553, passenger_count#554L, trip_distance#555, PULocationID#558, DOLocationID#559, payment_type#560L, fare_amount#561]
+
+(102) Project [codegen id : 20]
+Output [15]: [tpep_pickup_datetime#570, tpep_dropoff_datetime#571, passenger_count#572, trip_distance#555, PULocationID#558, DOLocationID#559, payment_type#576, fare_amount#561, 2024 AS source_year#579, (trip_distance#555 * 1.609344) AS trip_distance_km#864, (cast((unix_timestamp(tpep_dropoff_datetime#571, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#570, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#865, year(cast(tpep_pickup_datetime#570 as date)) AS pickup_year#866, month(cast(tpep_pickup_datetime#570 as date)) AS pickup_month#867, dayofweek(cast(tpep_pickup_datetime#570 as date)) AS day_of_week#868, hour(tpep_pickup_datetime#570, Some(UTC)) AS hour_of_day#869]
+Input [8]: [tpep_pickup_datetime#570, tpep_dropoff_datetime#571, passenger_count#572, trip_distance#555, PULocationID#558, DOLocationID#559, payment_type#576, fare_amount#561]
+
+(103) Scan parquet 
+Output [8]: [tpep_pickup_datetime#581, tpep_dropoff_datetime#582, passenger_count#583L, trip_distance#584, PULocationID#587, DOLocationID#588, payment_type#589L, fare_amount#590]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2024/yellow_tripdata_2024-09.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(104) ColumnarToRow [codegen id : 21]
+Input [8]: [tpep_pickup_datetime#581, tpep_dropoff_datetime#582, passenger_count#583L, trip_distance#584, PULocationID#587, DOLocationID#588, payment_type#589L, fare_amount#590]
+
+(105) Filter [codegen id : 21]
+Input [8]: [tpep_pickup_datetime#581, tpep_dropoff_datetime#582, passenger_count#583L, trip_distance#584, PULocationID#587, DOLocationID#588, payment_type#589L, fare_amount#590]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#581) AND isnotnull(tpep_dropoff_datetime#582)) AND isnotnull(passenger_count#583L)) AND isnotnull(payment_type#589L)) AND isnotnull(try_cast(tpep_pickup_datetime#581 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#582 as timestamp))) AND isnotnull(try_cast(passenger_count#583L as int))) AND isnotnull(trip_distance#584)) AND NOT isnan(trip_distance#584)) AND isnotnull(PULocationID#587)) AND isnotnull(DOLocationID#588)) AND isnotnull(try_cast(payment_type#589L as int))) AND isnotnull(fare_amount#590)) AND NOT isnan(fare_amount#590)) AND NOT coalesce((fare_amount#590 <= 0.0), false)) AND NOT coalesce((trip_distance#584 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#583L as int) < 1) OR (try_cast(passenger_count#583L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#582 as timestamp) <= try_cast(tpep_pickup_datetime#581 as timestamp)), false)) AND NOT coalesce((((PULocationID#587 < 1) OR (PULocationID#587 > 263)) OR ((DOLocationID#588 < 1) OR (DOLocationID#588 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#581 as timestamp) as date)) = 2024), false))
+
+(106) Project [codegen id : 21]
+Output [8]: [try_cast(tpep_pickup_datetime#581 as timestamp) AS tpep_pickup_datetime#599, try_cast(tpep_dropoff_datetime#582 as timestamp) AS tpep_dropoff_datetime#600, try_cast(passenger_count#583L as int) AS passenger_count#601, trip_distance#584, PULocationID#587, DOLocationID#588, try_cast(payment_type#589L as int) AS payment_type#605, fare_amount#590]
+Input [8]: [tpep_pickup_datetime#581, tpep_dropoff_datetime#582, passenger_count#583L, trip_distance#584, PULocationID#587, DOLocationID#588, payment_type#589L, fare_amount#590]
+
+(107) Project [codegen id : 21]
+Output [15]: [tpep_pickup_datetime#599, tpep_dropoff_datetime#600, passenger_count#601, trip_distance#584, PULocationID#587, DOLocationID#588, payment_type#605, fare_amount#590, 2024 AS source_year#608, (trip_distance#584 * 1.609344) AS trip_distance_km#870, (cast((unix_timestamp(tpep_dropoff_datetime#600, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#599, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#871, year(cast(tpep_pickup_datetime#599 as date)) AS pickup_year#872, month(cast(tpep_pickup_datetime#599 as date)) AS pickup_month#873, dayofweek(cast(tpep_pickup_datetime#599 as date)) AS day_of_week#874, hour(tpep_pickup_datetime#599, Some(UTC)) AS hour_of_day#875]
+Input [8]: [tpep_pickup_datetime#599, tpep_dropoff_datetime#600, passenger_count#601, trip_distance#584, PULocationID#587, DOLocationID#588, payment_type#605, fare_amount#590]
+
+(108) Scan parquet 
+Output [8]: [tpep_pickup_datetime#610, tpep_dropoff_datetime#611, passenger_count#612L, trip_distance#613, PULocationID#616, DOLocationID#617, payment_type#618L, fare_amount#619]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2024/yellow_tripdata_2024-10.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(109) ColumnarToRow [codegen id : 22]
+Input [8]: [tpep_pickup_datetime#610, tpep_dropoff_datetime#611, passenger_count#612L, trip_distance#613, PULocationID#616, DOLocationID#617, payment_type#618L, fare_amount#619]
+
+(110) Filter [codegen id : 22]
+Input [8]: [tpep_pickup_datetime#610, tpep_dropoff_datetime#611, passenger_count#612L, trip_distance#613, PULocationID#616, DOLocationID#617, payment_type#618L, fare_amount#619]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#610) AND isnotnull(tpep_dropoff_datetime#611)) AND isnotnull(passenger_count#612L)) AND isnotnull(payment_type#618L)) AND isnotnull(try_cast(tpep_pickup_datetime#610 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#611 as timestamp))) AND isnotnull(try_cast(passenger_count#612L as int))) AND isnotnull(trip_distance#613)) AND NOT isnan(trip_distance#613)) AND isnotnull(PULocationID#616)) AND isnotnull(DOLocationID#617)) AND isnotnull(try_cast(payment_type#618L as int))) AND isnotnull(fare_amount#619)) AND NOT isnan(fare_amount#619)) AND NOT coalesce((fare_amount#619 <= 0.0), false)) AND NOT coalesce((trip_distance#613 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#612L as int) < 1) OR (try_cast(passenger_count#612L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#611 as timestamp) <= try_cast(tpep_pickup_datetime#610 as timestamp)), false)) AND NOT coalesce((((PULocationID#616 < 1) OR (PULocationID#616 > 263)) OR ((DOLocationID#617 < 1) OR (DOLocationID#617 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#610 as timestamp) as date)) = 2024), false))
+
+(111) Project [codegen id : 22]
+Output [8]: [try_cast(tpep_pickup_datetime#610 as timestamp) AS tpep_pickup_datetime#628, try_cast(tpep_dropoff_datetime#611 as timestamp) AS tpep_dropoff_datetime#629, try_cast(passenger_count#612L as int) AS passenger_count#630, trip_distance#613, PULocationID#616, DOLocationID#617, try_cast(payment_type#618L as int) AS payment_type#634, fare_amount#619]
+Input [8]: [tpep_pickup_datetime#610, tpep_dropoff_datetime#611, passenger_count#612L, trip_distance#613, PULocationID#616, DOLocationID#617, payment_type#618L, fare_amount#619]
+
+(112) Project [codegen id : 22]
+Output [15]: [tpep_pickup_datetime#628, tpep_dropoff_datetime#629, passenger_count#630, trip_distance#613, PULocationID#616, DOLocationID#617, payment_type#634, fare_amount#619, 2024 AS source_year#637, (trip_distance#613 * 1.609344) AS trip_distance_km#876, (cast((unix_timestamp(tpep_dropoff_datetime#629, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#628, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#877, year(cast(tpep_pickup_datetime#628 as date)) AS pickup_year#878, month(cast(tpep_pickup_datetime#628 as date)) AS pickup_month#879, dayofweek(cast(tpep_pickup_datetime#628 as date)) AS day_of_week#880, hour(tpep_pickup_datetime#628, Some(UTC)) AS hour_of_day#881]
+Input [8]: [tpep_pickup_datetime#628, tpep_dropoff_datetime#629, passenger_count#630, trip_distance#613, PULocationID#616, DOLocationID#617, payment_type#634, fare_amount#619]
+
+(113) Scan parquet 
+Output [8]: [tpep_pickup_datetime#639, tpep_dropoff_datetime#640, passenger_count#641L, trip_distance#642, PULocationID#645, DOLocationID#646, payment_type#647L, fare_amount#648]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2024/yellow_tripdata_2024-11.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(114) ColumnarToRow [codegen id : 23]
+Input [8]: [tpep_pickup_datetime#639, tpep_dropoff_datetime#640, passenger_count#641L, trip_distance#642, PULocationID#645, DOLocationID#646, payment_type#647L, fare_amount#648]
+
+(115) Filter [codegen id : 23]
+Input [8]: [tpep_pickup_datetime#639, tpep_dropoff_datetime#640, passenger_count#641L, trip_distance#642, PULocationID#645, DOLocationID#646, payment_type#647L, fare_amount#648]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#639) AND isnotnull(tpep_dropoff_datetime#640)) AND isnotnull(passenger_count#641L)) AND isnotnull(payment_type#647L)) AND isnotnull(try_cast(tpep_pickup_datetime#639 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#640 as timestamp))) AND isnotnull(try_cast(passenger_count#641L as int))) AND isnotnull(trip_distance#642)) AND NOT isnan(trip_distance#642)) AND isnotnull(PULocationID#645)) AND isnotnull(DOLocationID#646)) AND isnotnull(try_cast(payment_type#647L as int))) AND isnotnull(fare_amount#648)) AND NOT isnan(fare_amount#648)) AND NOT coalesce((fare_amount#648 <= 0.0), false)) AND NOT coalesce((trip_distance#642 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#641L as int) < 1) OR (try_cast(passenger_count#641L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#640 as timestamp) <= try_cast(tpep_pickup_datetime#639 as timestamp)), false)) AND NOT coalesce((((PULocationID#645 < 1) OR (PULocationID#645 > 263)) OR ((DOLocationID#646 < 1) OR (DOLocationID#646 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#639 as timestamp) as date)) = 2024), false))
+
+(116) Project [codegen id : 23]
+Output [8]: [try_cast(tpep_pickup_datetime#639 as timestamp) AS tpep_pickup_datetime#657, try_cast(tpep_dropoff_datetime#640 as timestamp) AS tpep_dropoff_datetime#658, try_cast(passenger_count#641L as int) AS passenger_count#659, trip_distance#642, PULocationID#645, DOLocationID#646, try_cast(payment_type#647L as int) AS payment_type#663, fare_amount#648]
+Input [8]: [tpep_pickup_datetime#639, tpep_dropoff_datetime#640, passenger_count#641L, trip_distance#642, PULocationID#645, DOLocationID#646, payment_type#647L, fare_amount#648]
+
+(117) Project [codegen id : 23]
+Output [15]: [tpep_pickup_datetime#657, tpep_dropoff_datetime#658, passenger_count#659, trip_distance#642, PULocationID#645, DOLocationID#646, payment_type#663, fare_amount#648, 2024 AS source_year#666, (trip_distance#642 * 1.609344) AS trip_distance_km#882, (cast((unix_timestamp(tpep_dropoff_datetime#658, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#657, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#883, year(cast(tpep_pickup_datetime#657 as date)) AS pickup_year#884, month(cast(tpep_pickup_datetime#657 as date)) AS pickup_month#885, dayofweek(cast(tpep_pickup_datetime#657 as date)) AS day_of_week#886, hour(tpep_pickup_datetime#657, Some(UTC)) AS hour_of_day#887]
+Input [8]: [tpep_pickup_datetime#657, tpep_dropoff_datetime#658, passenger_count#659, trip_distance#642, PULocationID#645, DOLocationID#646, payment_type#663, fare_amount#648]
+
+(118) Scan parquet 
+Output [8]: [tpep_pickup_datetime#668, tpep_dropoff_datetime#669, passenger_count#670L, trip_distance#671, PULocationID#674, DOLocationID#675, payment_type#676L, fare_amount#677]
+Batched: true
+Location: InMemoryFileIndex [file:/project/data/raw/yellow/2024/yellow_tripdata_2024-12.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(tpep_dropoff_datetime), IsNotNull(passenger_count), IsNotNull(payment_type), IsNotNull(trip_distance), IsNotNull(PULocationID), IsNotNull(DOLocationID), IsNotNull(fare_amount)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,passenger_count:bigint,trip_distance:double,PULocationID:int,DOLocationID:int,payment_type:bigint,fare_amount:double>
+
+(119) ColumnarToRow [codegen id : 24]
+Input [8]: [tpep_pickup_datetime#668, tpep_dropoff_datetime#669, passenger_count#670L, trip_distance#671, PULocationID#674, DOLocationID#675, payment_type#676L, fare_amount#677]
+
+(120) Filter [codegen id : 24]
+Input [8]: [tpep_pickup_datetime#668, tpep_dropoff_datetime#669, passenger_count#670L, trip_distance#671, PULocationID#674, DOLocationID#675, payment_type#676L, fare_amount#677]
+Condition : (((((((((((((((((((isnotnull(tpep_pickup_datetime#668) AND isnotnull(tpep_dropoff_datetime#669)) AND isnotnull(passenger_count#670L)) AND isnotnull(payment_type#676L)) AND isnotnull(try_cast(tpep_pickup_datetime#668 as timestamp))) AND isnotnull(try_cast(tpep_dropoff_datetime#669 as timestamp))) AND isnotnull(try_cast(passenger_count#670L as int))) AND isnotnull(trip_distance#671)) AND NOT isnan(trip_distance#671)) AND isnotnull(PULocationID#674)) AND isnotnull(DOLocationID#675)) AND isnotnull(try_cast(payment_type#676L as int))) AND isnotnull(fare_amount#677)) AND NOT isnan(fare_amount#677)) AND NOT coalesce((fare_amount#677 <= 0.0), false)) AND NOT coalesce((trip_distance#671 <= 0.0), false)) AND NOT coalesce(((try_cast(passenger_count#670L as int) < 1) OR (try_cast(passenger_count#670L as int) > 6)), false)) AND NOT coalesce((try_cast(tpep_dropoff_datetime#669 as timestamp) <= try_cast(tpep_pickup_datetime#668 as timestamp)), false)) AND NOT coalesce((((PULocationID#674 < 1) OR (PULocationID#674 > 263)) OR ((DOLocationID#675 < 1) OR (DOLocationID#675 > 263))), false)) AND NOT coalesce(NOT (year(cast(try_cast(tpep_pickup_datetime#668 as timestamp) as date)) = 2024), false))
+
+(121) Project [codegen id : 24]
+Output [8]: [try_cast(tpep_pickup_datetime#668 as timestamp) AS tpep_pickup_datetime#686, try_cast(tpep_dropoff_datetime#669 as timestamp) AS tpep_dropoff_datetime#687, try_cast(passenger_count#670L as int) AS passenger_count#688, trip_distance#671, PULocationID#674, DOLocationID#675, try_cast(payment_type#676L as int) AS payment_type#692, fare_amount#677]
+Input [8]: [tpep_pickup_datetime#668, tpep_dropoff_datetime#669, passenger_count#670L, trip_distance#671, PULocationID#674, DOLocationID#675, payment_type#676L, fare_amount#677]
+
+(122) Project [codegen id : 24]
+Output [15]: [tpep_pickup_datetime#686, tpep_dropoff_datetime#687, passenger_count#688, trip_distance#671, PULocationID#674, DOLocationID#675, payment_type#692, fare_amount#677, 2024 AS source_year#695, (trip_distance#671 * 1.609344) AS trip_distance_km#888, (cast((unix_timestamp(tpep_dropoff_datetime#687, yyyy-MM-dd HH:mm:ss, Some(UTC), true) - unix_timestamp(tpep_pickup_datetime#686, yyyy-MM-dd HH:mm:ss, Some(UTC), true)) as double) / 60.0) AS trip_duration_minutes#889, year(cast(tpep_pickup_datetime#686 as date)) AS pickup_year#890, month(cast(tpep_pickup_datetime#686 as date)) AS pickup_month#891, dayofweek(cast(tpep_pickup_datetime#686 as date)) AS day_of_week#892, hour(tpep_pickup_datetime#686, Some(UTC)) AS hour_of_day#893]
+Input [8]: [tpep_pickup_datetime#686, tpep_dropoff_datetime#687, passenger_count#688, trip_distance#671, PULocationID#674, DOLocationID#675, payment_type#692, fare_amount#677]
+
+(123) Union
+
+(124) Filter
+Input [4]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730]
+Condition : isnotnull(PULocationID#23)
+
+(125) HashAggregate
+Input [4]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730]
+Keys [4]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730]
+Functions [1]: [partial_count(1)]
+Aggregate Attributes [1]: [count#3575L]
+Results [5]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730, count#3576L]
+
+(126) Exchange
+Input [5]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730, count#3576L]
+Arguments: hashpartitioning(PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730, 200), ENSURE_REQUIREMENTS, [plan_id=758]
+
+(127) HashAggregate
+Input [5]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730, count#3576L]
+Keys [4]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730]
+Functions [1]: [count(1)]
+Aggregate Attributes [1]: [count(1)#2292L]
+Results [5]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730, count(1)#2292L AS trip_count#2276L]
+
+(128) Exchange
+Input [5]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730, trip_count#2276L]
+Arguments: hashpartitioning(PULocationID#23, pickup_year#729, pickup_month#730, 200), ENSURE_REQUIREMENTS, [plan_id=761]
+
+(129) Sort
+Input [5]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730, trip_count#2276L]
+Arguments: [PULocationID#23 ASC NULLS FIRST, pickup_year#729 ASC NULLS FIRST, pickup_month#730 ASC NULLS FIRST], false, 0
+
+(130) Window
+Input [5]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730, trip_count#2276L]
+Arguments: [sum(trip_count#2276L) windowspecdefinition(PULocationID#23, pickup_year#729, pickup_month#730, specifiedwindowframe(RowFrame, unboundedpreceding$(), unboundedfollowing$())) AS _we0#2295L], [PULocationID#23, pickup_year#729, pickup_month#730]
+
+(131) Filter
+Input [6]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730, trip_count#2276L, _we0#2295L]
+Condition : isnotnull(DOLocationID#24)
+
+(132) Project
+Output [6]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730, trip_count#2276L, (cast(trip_count#2276L as double) / cast(_we0#2295L as double)) AS route_share#2293]
+Input [6]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730, trip_count#2276L, _we0#2295L]
+
+(133) Exchange
+Input [6]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730, trip_count#2276L, route_share#2293]
+Arguments: hashpartitioning(PULocationID#23, 200), ENSURE_REQUIREMENTS, [plan_id=768]
+
+(134) Sort
+Input [6]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730, trip_count#2276L, route_share#2293]
+Arguments: [PULocationID#23 ASC NULLS FIRST], false, 0
+
+(135) Scan csv 
+Output [3]: [LocationID#713, Borough#714, Zone#715]
+Batched: false
+Location: InMemoryFileIndex [file:/project/data/raw/lookup/taxi_zone_lookup.csv]
+PushedFilters: [IsNotNull(LocationID)]
+ReadSchema: struct<LocationID:int,Borough:string,Zone:string>
+
+(136) Filter
+Input [3]: [LocationID#713, Borough#714, Zone#715]
+Condition : isnotnull(LocationID#713)
+
+(137) Project
+Output [3]: [LocationID#713 AS PULocationID#2296, Borough#714 AS pickup_borough#2297, Zone#715 AS pickup_zone#2298]
+Input [3]: [LocationID#713, Borough#714, Zone#715]
+
+(138) Exchange
+Input [3]: [PULocationID#2296, pickup_borough#2297, pickup_zone#2298]
+Arguments: hashpartitioning(PULocationID#2296, 200), ENSURE_REQUIREMENTS, [plan_id=769]
+
+(139) Sort
+Input [3]: [PULocationID#2296, pickup_borough#2297, pickup_zone#2298]
+Arguments: [PULocationID#2296 ASC NULLS FIRST], false, 0
+
+(140) SortMergeJoin
+Left keys [1]: [PULocationID#23]
+Right keys [1]: [PULocationID#2296]
+Join type: Inner
+Join condition: None
+
+(141) Project
+Output [8]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730, trip_count#2276L, route_share#2293, pickup_borough#2297, pickup_zone#2298]
+Input [9]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730, trip_count#2276L, route_share#2293, PULocationID#2296, pickup_borough#2297, pickup_zone#2298]
+
+(142) Exchange
+Input [8]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730, trip_count#2276L, route_share#2293, pickup_borough#2297, pickup_zone#2298]
+Arguments: hashpartitioning(DOLocationID#24, 200), ENSURE_REQUIREMENTS, [plan_id=776]
+
+(143) Sort
+Input [8]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730, trip_count#2276L, route_share#2293, pickup_borough#2297, pickup_zone#2298]
+Arguments: [DOLocationID#24 ASC NULLS FIRST], false, 0
+
+(144) Scan csv 
+Output [3]: [LocationID#2302, Borough#2303, Zone#2304]
+Batched: false
+Location: InMemoryFileIndex [file:/project/data/raw/lookup/taxi_zone_lookup.csv]
+PushedFilters: [IsNotNull(LocationID)]
+ReadSchema: struct<LocationID:int,Borough:string,Zone:string>
+
+(145) Filter
+Input [3]: [LocationID#2302, Borough#2303, Zone#2304]
+Condition : isnotnull(LocationID#2302)
+
+(146) Project
+Output [3]: [LocationID#2302 AS DOLocationID#2299, Borough#2303 AS dropoff_borough#2300, Zone#2304 AS dropoff_zone#2301]
+Input [3]: [LocationID#2302, Borough#2303, Zone#2304]
+
+(147) Exchange
+Input [3]: [DOLocationID#2299, dropoff_borough#2300, dropoff_zone#2301]
+Arguments: hashpartitioning(DOLocationID#2299, 200), ENSURE_REQUIREMENTS, [plan_id=777]
+
+(148) Sort
+Input [3]: [DOLocationID#2299, dropoff_borough#2300, dropoff_zone#2301]
+Arguments: [DOLocationID#2299 ASC NULLS FIRST], false, 0
+
+(149) SortMergeJoin
+Left keys [1]: [DOLocationID#24]
+Right keys [1]: [DOLocationID#2299]
+Join type: Inner
+Join condition: None
+
+(150) Project
+Output [10]: [DOLocationID#24, PULocationID#23, pickup_year#729, pickup_month#730, trip_count#2276L, route_share#2293, pickup_borough#2297, pickup_zone#2298, dropoff_borough#2300, dropoff_zone#2301]
+Input [11]: [PULocationID#23, DOLocationID#24, pickup_year#729, pickup_month#730, trip_count#2276L, route_share#2293, pickup_borough#2297, pickup_zone#2298, DOLocationID#2299, dropoff_borough#2300, dropoff_zone#2301]
+
+(151) AdaptiveSparkPlan
+Output [10]: [DOLocationID#24, PULocationID#23, pickup_year#729, pickup_month#730, trip_count#2276L, route_share#2293, pickup_borough#2297, pickup_zone#2298, dropoff_borough#2300, dropoff_zone#2301]
+Arguments: isFinalPlan=false
+
+

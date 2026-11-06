@@ -1,0 +1,9 @@
+{
+  "run": "escala_2w_cache_03",
+  "workers": 2,
+  "cores_per_worker": 2,
+  "worker_memory_GiB": 2,
+  "executor_memory": "1536m",
+  "total_cores": 4,
+  "started_local": "2026-11-06T13:57:12.5068417+00:00"
+}

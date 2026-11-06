@@ -1,0 +1,829 @@
+{
+  "scope": "invariantes por dimensao na primeira corrida; repeticoes e resultados anuais comparaveis",
+  "float_atol": 1e-09,
+  "float_rtol": 1e-12,
+  "inventory": [
+    {
+      "year": 2022,
+      "files": 12,
+      "bytes": 615099663,
+      "raw_rows": 39656098
+    },
+    {
+      "year": 2023,
+      "files": 12,
+      "bytes": 635743618,
+      "raw_rows": 38310226
+    },
+    {
+      "year": 2024,
+      "files": 12,
+      "bytes": 693001713,
+      "raw_rows": 41169720
+    }
+  ],
+  "runs": [
+    {
+      "period": "2023",
+      "run": "dimensao_2023_cache_01",
+      "years": [
+        2023
+      ],
+      "valid_rows": 35078287,
+      "raw_rows": 38310226,
+      "source_bytes": 635743618
+    },
+    {
+      "period": "2023",
+      "run": "dimensao_2023_cache_02",
+      "years": [
+        2023
+      ],
+      "valid_rows": 35078287,
+      "raw_rows": 38310226,
+      "source_bytes": 635743618
+    },
+    {
+      "period": "2023",
+      "run": "dimensao_2023_cache_03",
+      "years": [
+        2023
+      ],
+      "valid_rows": 35078287,
+      "raw_rows": 38310226,
+      "source_bytes": 635743618
+    },
+    {
+      "period": "2023+2024",
+      "run": "escala_3w_cache_01",
+      "years": [
+        2023,
+        2024
+      ],
+      "valid_rows": 70353039,
+      "raw_rows": 79479946,
+      "source_bytes": 1328745331
+    },
+    {
+      "period": "2023+2024",
+      "run": "escala_3w_cache_02",
+      "years": [
+        2023,
+        2024
+      ],
+      "valid_rows": 70353039,
+      "raw_rows": 79479946,
+      "source_bytes": 1328745331
+    },
+    {
+      "period": "2023+2024",
+      "run": "escala_3w_cache_03",
+      "years": [
+        2023,
+        2024
+      ],
+      "valid_rows": 70353039,
+      "raw_rows": 79479946,
+      "source_bytes": 1328745331
+    },
+    {
+      "period": "2022+2023+2024",
+      "run": "dimensao_2022_2023_2024_cache_01",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "valid_rows": 106562994,
+      "raw_rows": 119136044,
+      "source_bytes": 1943844994
+    },
+    {
+      "period": "2022+2023+2024",
+      "run": "dimensao_2022_2023_2024_cache_02",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "valid_rows": 106562994,
+      "raw_rows": 119136044,
+      "source_bytes": 1943844994
+    },
+    {
+      "period": "2022+2023+2024",
+      "run": "dimensao_2022_2023_2024_cache_03",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "valid_rows": 106562994,
+      "raw_rows": 119136044,
+      "source_bytes": 1943844994
+    }
+  ],
+  "invariants": [
+    {
+      "period": "2023",
+      "test": "12 ficheiros por ano; fraction=1",
+      "passed": true
+    },
+    {
+      "period": "2023",
+      "test": "anos pedidos em M1",
+      "passed": true
+    },
+    {
+      "period": "2023",
+      "test": "total bruto confere com metadados Parquet",
+      "passed": true
+    },
+    {
+      "period": "2023",
+      "test": "total menos invalidas igual a mantidas",
+      "passed": true
+    },
+    {
+      "period": "2023",
+      "test": "mantidas igual a clean.count",
+      "passed": true
+    },
+    {
+      "period": "2023",
+      "test": "flags entre zero e total",
+      "passed": true
+    },
+    {
+      "period": "2023",
+      "test": "M2 soma das viagens",
+      "passed": true
+    },
+    {
+      "period": "2023",
+      "test": "M3 grelha 263 zonas x meses",
+      "passed": true
+    },
+    {
+      "period": "2023",
+      "test": "M3 soma das viagens",
+      "passed": true
+    },
+    {
+      "period": "2023",
+      "test": "M3 contagens nao negativas",
+      "passed": true
+    },
+    {
+      "period": "2023",
+      "test": "O1 soma das viagens",
+      "passed": true
+    },
+    {
+      "period": "2023",
+      "test": "O1 anomalias dentro das contagens",
+      "passed": true
+    },
+    {
+      "period": "2023",
+      "test": "O1 taxas coerentes com contagens",
+      "passed": true
+    },
+    {
+      "period": "2023",
+      "test": "O2 soma das viagens",
+      "passed": true
+    },
+    {
+      "period": "2023",
+      "test": "O2 anos e meses",
+      "passed": true
+    },
+    {
+      "period": "2023",
+      "test": "O2 shares entre zero e um",
+      "passed": true
+    },
+    {
+      "period": "2023",
+      "test": "O2 shares somam um por origem e mes",
+      "passed": true
+    },
+    {
+      "period": "2023",
+      "test": "O2 inversoes apenas dos anos pedidos",
+      "passed": true
+    },
+    {
+      "period": "2023",
+      "test": "O2 top ate 20 por borough",
+      "passed": true
+    },
+    {
+      "period": "2023",
+      "test": "O2 anos com inversao dentro do periodo",
+      "passed": true
+    },
+    {
+      "period": "2023+2024",
+      "test": "12 ficheiros por ano; fraction=1",
+      "passed": true
+    },
+    {
+      "period": "2023+2024",
+      "test": "anos pedidos em M1",
+      "passed": true
+    },
+    {
+      "period": "2023+2024",
+      "test": "total bruto confere com metadados Parquet",
+      "passed": true
+    },
+    {
+      "period": "2023+2024",
+      "test": "total menos invalidas igual a mantidas",
+      "passed": true
+    },
+    {
+      "period": "2023+2024",
+      "test": "mantidas igual a clean.count",
+      "passed": true
+    },
+    {
+      "period": "2023+2024",
+      "test": "flags entre zero e total",
+      "passed": true
+    },
+    {
+      "period": "2023+2024",
+      "test": "M2 soma das viagens",
+      "passed": true
+    },
+    {
+      "period": "2023+2024",
+      "test": "M3 grelha 263 zonas x meses",
+      "passed": true
+    },
+    {
+      "period": "2023+2024",
+      "test": "M3 soma das viagens",
+      "passed": true
+    },
+    {
+      "period": "2023+2024",
+      "test": "M3 contagens nao negativas",
+      "passed": true
+    },
+    {
+      "period": "2023+2024",
+      "test": "O1 soma das viagens",
+      "passed": true
+    },
+    {
+      "period": "2023+2024",
+      "test": "O1 anomalias dentro das contagens",
+      "passed": true
+    },
+    {
+      "period": "2023+2024",
+      "test": "O1 taxas coerentes com contagens",
+      "passed": true
+    },
+    {
+      "period": "2023+2024",
+      "test": "O2 soma das viagens",
+      "passed": true
+    },
+    {
+      "period": "2023+2024",
+      "test": "O2 anos e meses",
+      "passed": true
+    },
+    {
+      "period": "2023+2024",
+      "test": "O2 shares entre zero e um",
+      "passed": true
+    },
+    {
+      "period": "2023+2024",
+      "test": "O2 shares somam um por origem e mes",
+      "passed": true
+    },
+    {
+      "period": "2023+2024",
+      "test": "O2 inversoes apenas dos anos pedidos",
+      "passed": true
+    },
+    {
+      "period": "2023+2024",
+      "test": "O2 top ate 20 por borough",
+      "passed": true
+    },
+    {
+      "period": "2023+2024",
+      "test": "O2 anos com inversao dentro do periodo",
+      "passed": true
+    },
+    {
+      "period": "2022+2023+2024",
+      "test": "12 ficheiros por ano; fraction=1",
+      "passed": true
+    },
+    {
+      "period": "2022+2023+2024",
+      "test": "anos pedidos em M1",
+      "passed": true
+    },
+    {
+      "period": "2022+2023+2024",
+      "test": "total bruto confere com metadados Parquet",
+      "passed": true
+    },
+    {
+      "period": "2022+2023+2024",
+      "test": "total menos invalidas igual a mantidas",
+      "passed": true
+    },
+    {
+      "period": "2022+2023+2024",
+      "test": "mantidas igual a clean.count",
+      "passed": true
+    },
+    {
+      "period": "2022+2023+2024",
+      "test": "flags entre zero e total",
+      "passed": true
+    },
+    {
+      "period": "2022+2023+2024",
+      "test": "M2 soma das viagens",
+      "passed": true
+    },
+    {
+      "period": "2022+2023+2024",
+      "test": "M3 grelha 263 zonas x meses",
+      "passed": true
+    },
+    {
+      "period": "2022+2023+2024",
+      "test": "M3 soma das viagens",
+      "passed": true
+    },
+    {
+      "period": "2022+2023+2024",
+      "test": "M3 contagens nao negativas",
+      "passed": true
+    },
+    {
+      "period": "2022+2023+2024",
+      "test": "O1 soma das viagens",
+      "passed": true
+    },
+    {
+      "period": "2022+2023+2024",
+      "test": "O1 anomalias dentro das contagens",
+      "passed": true
+    },
+    {
+      "period": "2022+2023+2024",
+      "test": "O1 taxas coerentes com contagens",
+      "passed": true
+    },
+    {
+      "period": "2022+2023+2024",
+      "test": "O2 soma das viagens",
+      "passed": true
+    },
+    {
+      "period": "2022+2023+2024",
+      "test": "O2 anos e meses",
+      "passed": true
+    },
+    {
+      "period": "2022+2023+2024",
+      "test": "O2 shares entre zero e um",
+      "passed": true
+    },
+    {
+      "period": "2022+2023+2024",
+      "test": "O2 shares somam um por origem e mes",
+      "passed": true
+    },
+    {
+      "period": "2022+2023+2024",
+      "test": "O2 inversoes apenas dos anos pedidos",
+      "passed": true
+    },
+    {
+      "period": "2022+2023+2024",
+      "test": "O2 top ate 20 por borough",
+      "passed": true
+    },
+    {
+      "period": "2022+2023+2024",
+      "test": "O2 anos com inversao dentro do periodo",
+      "passed": true
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison": "2023: repeticao 2 vs 1",
+      "table": "m1_cleaning_stats.csv",
+      "rows": 1,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023: repeticao 2 vs 1",
+      "table": "m2_demand",
+      "rows": 983,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023: repeticao 2 vs 1",
+      "table": "m3_zone_month",
+      "rows": 3156,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023: repeticao 2 vs 1",
+      "table": "o1_anomaly_rates.csv",
+      "rows": 48,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023: repeticao 2 vs 1",
+      "table": "o2_route_month",
+      "rows": 258182,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023: repeticao 2 vs 1",
+      "table": "o2_q1_q3_reversal",
+      "rows": 41530,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023: repeticao 2 vs 1",
+      "table": "o2_top_routes.csv",
+      "rows": 120,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023: repeticao 3 vs 1",
+      "table": "m1_cleaning_stats.csv",
+      "rows": 1,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023: repeticao 3 vs 1",
+      "table": "m2_demand",
+      "rows": 983,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023: repeticao 3 vs 1",
+      "table": "m3_zone_month",
+      "rows": 3156,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023: repeticao 3 vs 1",
+      "table": "o1_anomaly_rates.csv",
+      "rows": 48,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023: repeticao 3 vs 1",
+      "table": "o2_route_month",
+      "rows": 258182,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023: repeticao 3 vs 1",
+      "table": "o2_q1_q3_reversal",
+      "rows": 41530,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023: repeticao 3 vs 1",
+      "table": "o2_top_routes.csv",
+      "rows": 120,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023+2024: repeticao 2 vs 1",
+      "table": "m1_cleaning_stats.csv",
+      "rows": 2,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023+2024: repeticao 2 vs 1",
+      "table": "m2_demand",
+      "rows": 995,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023+2024: repeticao 2 vs 1",
+      "table": "m3_zone_month",
+      "rows": 6312,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023+2024: repeticao 2 vs 1",
+      "table": "o1_anomaly_rates.csv",
+      "rows": 48,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023+2024: repeticao 2 vs 1",
+      "table": "o2_route_month",
+      "rows": 558419,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023+2024: repeticao 2 vs 1",
+      "table": "o2_q1_q3_reversal",
+      "rows": 86477,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023+2024: repeticao 2 vs 1",
+      "table": "o2_top_routes.csv",
+      "rows": 120,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023+2024: repeticao 3 vs 1",
+      "table": "m1_cleaning_stats.csv",
+      "rows": 2,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023+2024: repeticao 3 vs 1",
+      "table": "m2_demand",
+      "rows": 995,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023+2024: repeticao 3 vs 1",
+      "table": "m3_zone_month",
+      "rows": 6312,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023+2024: repeticao 3 vs 1",
+      "table": "o1_anomaly_rates.csv",
+      "rows": 48,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023+2024: repeticao 3 vs 1",
+      "table": "o2_route_month",
+      "rows": 558419,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023+2024: repeticao 3 vs 1",
+      "table": "o2_q1_q3_reversal",
+      "rows": 86477,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023+2024: repeticao 3 vs 1",
+      "table": "o2_top_routes.csv",
+      "rows": 120,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2022+2023+2024: repeticao 2 vs 1",
+      "table": "m1_cleaning_stats.csv",
+      "rows": 3,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2022+2023+2024: repeticao 2 vs 1",
+      "table": "m2_demand",
+      "rows": 1003,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2022+2023+2024: repeticao 2 vs 1",
+      "table": "m3_zone_month",
+      "rows": 9468,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2022+2023+2024: repeticao 2 vs 1",
+      "table": "o1_anomaly_rates.csv",
+      "rows": 49,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2022+2023+2024: repeticao 2 vs 1",
+      "table": "o2_route_month",
+      "rows": 800718,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2022+2023+2024: repeticao 2 vs 1",
+      "table": "o2_q1_q3_reversal",
+      "rows": 125486,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2022+2023+2024: repeticao 2 vs 1",
+      "table": "o2_top_routes.csv",
+      "rows": 120,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2022+2023+2024: repeticao 3 vs 1",
+      "table": "m1_cleaning_stats.csv",
+      "rows": 3,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2022+2023+2024: repeticao 3 vs 1",
+      "table": "m2_demand",
+      "rows": 1003,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2022+2023+2024: repeticao 3 vs 1",
+      "table": "m3_zone_month",
+      "rows": 9468,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2022+2023+2024: repeticao 3 vs 1",
+      "table": "o1_anomaly_rates.csv",
+      "rows": 49,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2022+2023+2024: repeticao 3 vs 1",
+      "table": "o2_route_month",
+      "rows": 800718,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2022+2023+2024: repeticao 3 vs 1",
+      "table": "o2_q1_q3_reversal",
+      "rows": 125486,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2022+2023+2024: repeticao 3 vs 1",
+      "table": "o2_top_routes.csv",
+      "rows": 120,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023 vs 2023+2024: anos comuns",
+      "table": "m1_cleaning_stats.csv",
+      "rows": 1,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023 vs 2023+2024: anos comuns",
+      "table": "o2_route_month",
+      "rows": 258182,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023 vs 2023+2024: anos comuns",
+      "table": "o2_q1_q3_reversal",
+      "rows": 41530,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023 vs 2023+2024: anos comuns (M3 sem janelas)",
+      "table": "m3_zone_month",
+      "rows": 3156,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023 vs 2023+2024: anos comuns (M3 historico comparavel)",
+      "table": "m3_zone_month",
+      "rows": 3156,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023 vs 2022+2023+2024: anos comuns",
+      "table": "m1_cleaning_stats.csv",
+      "rows": 1,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023 vs 2022+2023+2024: anos comuns",
+      "table": "o2_route_month",
+      "rows": 258182,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023 vs 2022+2023+2024: anos comuns",
+      "table": "o2_q1_q3_reversal",
+      "rows": 41530,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023 vs 2022+2023+2024: anos comuns (M3 sem janelas)",
+      "table": "m3_zone_month",
+      "rows": 3156,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023 vs 2022+2023+2024: anos comuns (M3 historico comparavel)",
+      "table": "m3_zone_month",
+      "rows": 2367,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023+2024 vs 2022+2023+2024: anos comuns",
+      "table": "m1_cleaning_stats.csv",
+      "rows": 2,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023+2024 vs 2022+2023+2024: anos comuns",
+      "table": "o2_route_month",
+      "rows": 558419,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023+2024 vs 2022+2023+2024: anos comuns",
+      "table": "o2_q1_q3_reversal",
+      "rows": 86477,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023+2024 vs 2022+2023+2024: anos comuns (M3 sem janelas)",
+      "table": "m3_zone_month",
+      "rows": 6312,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "2023+2024 vs 2022+2023+2024: anos comuns (M3 historico comparavel)",
+      "table": "m3_zone_month",
+      "rows": 5523,
+      "differences": 0,
+      "max_float_difference": 0.0
+    }
+  ]
+}

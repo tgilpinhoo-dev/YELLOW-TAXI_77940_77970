@@ -1,0 +1,149 @@
+[
+  {
+    "run": "aqe_desligado_cache_01",
+    "table": "m1_cleaning_stats.csv",
+    "rows": 2,
+    "differences": 0,
+    "max_float_difference": 0.0
+  },
+  {
+    "run": "aqe_desligado_cache_02",
+    "table": "m1_cleaning_stats.csv",
+    "rows": 2,
+    "differences": 0,
+    "max_float_difference": 0.0
+  },
+  {
+    "run": "aqe_desligado_cache_03",
+    "table": "m1_cleaning_stats.csv",
+    "rows": 2,
+    "differences": 0,
+    "max_float_difference": 0.0
+  },
+  {
+    "run": "aqe_desligado_cache_01",
+    "table": "m2_demand",
+    "rows": 995,
+    "differences": 0,
+    "max_float_difference": 0.0
+  },
+  {
+    "run": "aqe_desligado_cache_02",
+    "table": "m2_demand",
+    "rows": 995,
+    "differences": 0,
+    "max_float_difference": 0.0
+  },
+  {
+    "run": "aqe_desligado_cache_03",
+    "table": "m2_demand",
+    "rows": 995,
+    "differences": 0,
+    "max_float_difference": 0.0
+  },
+  {
+    "run": "aqe_desligado_cache_01",
+    "table": "m3_zone_month",
+    "rows": 6312,
+    "differences": 0,
+    "max_float_difference": 0.0
+  },
+  {
+    "run": "aqe_desligado_cache_02",
+    "table": "m3_zone_month",
+    "rows": 6312,
+    "differences": 0,
+    "max_float_difference": 0.0
+  },
+  {
+    "run": "aqe_desligado_cache_03",
+    "table": "m3_zone_month",
+    "rows": 6312,
+    "differences": 0,
+    "max_float_difference": 0.0
+  },
+  {
+    "run": "aqe_desligado_cache_01",
+    "table": "o1_anomaly_rates.csv",
+    "rows": 48,
+    "differences": 0,
+    "max_float_difference": 0.0
+  },
+  {
+    "run": "aqe_desligado_cache_02",
+    "table": "o1_anomaly_rates.csv",
+    "rows": 48,
+    "differences": 0,
+    "max_float_difference": 0.0
+  },
+  {
+    "run": "aqe_desligado_cache_03",
+    "table": "o1_anomaly_rates.csv",
+    "rows": 48,
+    "differences": 0,
+    "max_float_difference": 0.0
+  },
+  {
+    "run": "aqe_desligado_cache_01",
+    "table": "o2_route_month",
+    "rows": 558419,
+    "differences": 0,
+    "max_float_difference": 0.0
+  },
+  {
+    "run": "aqe_desligado_cache_02",
+    "table": "o2_route_month",
+    "rows": 558419,
+    "differences": 0,
+    "max_float_difference": 0.0
+  },
+  {
+    "run": "aqe_desligado_cache_03",
+    "table": "o2_route_month",
+    "rows": 558419,
+    "differences": 0,
+    "max_float_difference": 0.0
+  },
+  {
+    "run": "aqe_desligado_cache_01",
+    "table": "o2_q1_q3_reversal",
+    "rows": 86477,
+    "differences": 0,
+    "max_float_difference": 0.0
+  },
+  {
+    "run": "aqe_desligado_cache_02",
+    "table": "o2_q1_q3_reversal",
+    "rows": 86477,
+    "differences": 0,
+    "max_float_difference": 0.0
+  },
+  {
+    "run": "aqe_desligado_cache_03",
+    "table": "o2_q1_q3_reversal",
+    "rows": 86477,
+    "differences": 0,
+    "max_float_difference": 0.0
+  },
+  {
+    "run": "aqe_desligado_cache_01",
+    "table": "o2_top_routes.csv",
+    "rows": 120,
+    "differences": 0,
+    "max_float_difference": 0.0
+  },
+  {
+    "run": "aqe_desligado_cache_02",
+    "table": "o2_top_routes.csv",
+    "rows": 120,
+    "differences": 0,
+    "max_float_difference": 0.0
+  },
+  {
+    "run": "aqe_desligado_cache_03",
+    "table": "o2_top_routes.csv",
+    "rows": 120,
+    "differences": 0,
+    "max_float_difference": 0.0
+  }
+]

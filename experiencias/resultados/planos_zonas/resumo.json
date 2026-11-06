@@ -1,0 +1,55 @@
+{
+  "scope": "planos iniciais; cache declarada mas nao materializada; fora das medicoes",
+  "files": 24,
+  "fraction": 1.0,
+  "spark_version": "4.2.0",
+  "application_id": "app-20261106124846-0013",
+  "plans": [
+    {
+      "query": "m2",
+      "strategy": "broadcast",
+      "file": "m2_broadcast.txt",
+      "operators": [
+        "+- BroadcastHashJoin Inner BuildRight (129)",
+        "+- BroadcastExchange (128)",
+        "(128) BroadcastExchange",
+        "(129) BroadcastHashJoin"
+      ]
+    },
+    {
+      "query": "o2_routes",
+      "strategy": "broadcast",
+      "file": "o2_routes_broadcast.txt",
+      "operators": [
+        "+- BroadcastHashJoin Inner BuildRight (143)",
+        ":  +- BroadcastHashJoin Inner BuildRight (137)",
+        ":     +- BroadcastExchange (136)",
+        "+- BroadcastExchange (142)",
+        "(136) BroadcastExchange",
+        "(137) BroadcastHashJoin",
+        "(142) BroadcastExchange",
+        "(143) BroadcastHashJoin"
+      ]
+    },
+    {
+      "query": "m2",
+      "strategy": "sortmerge",
+      "file": "m2_sortmerge.txt",
+      "operators": [
+        "+- SortMergeJoin Inner (132)",
+        "(132) SortMergeJoin"
+      ]
+    },
+    {
+      "query": "o2_routes",
+      "strategy": "sortmerge",
+      "file": "o2_routes_sortmerge.txt",
+      "operators": [
+        "+- SortMergeJoin Inner (149)",
+        ":        +- SortMergeJoin Inner (140)",
+        "(140) SortMergeJoin",
+        "(149) SortMergeJoin"
+      ]
+    }
+  ]
+}

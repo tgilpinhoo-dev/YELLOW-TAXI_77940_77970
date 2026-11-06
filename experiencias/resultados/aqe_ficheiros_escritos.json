@@ -1,0 +1,44 @@
+[
+  {
+    "run": "baseline_com_cache_01",
+    "m2_demand": 18,
+    "m3_zone_month": 6,
+    "o2_route_month": 6,
+    "o2_q1_q3_reversal": 5
+  },
+  {
+    "run": "baseline_com_cache_02",
+    "m2_demand": 18,
+    "m3_zone_month": 6,
+    "o2_route_month": 6,
+    "o2_q1_q3_reversal": 5
+  },
+  {
+    "run": "baseline_com_cache_03",
+    "m2_demand": 18,
+    "m3_zone_month": 6,
+    "o2_route_month": 6,
+    "o2_q1_q3_reversal": 5
+  },
+  {
+    "run": "aqe_desligado_cache_01",
+    "m2_demand": 684,
+    "m3_zone_month": 239,
+    "o2_route_month": 200,
+    "o2_q1_q3_reversal": 200
+  },
+  {
+    "run": "aqe_desligado_cache_02",
+    "m2_demand": 684,
+    "m3_zone_month": 239,
+    "o2_route_month": 200,
+    "o2_q1_q3_reversal": 200
+  },
+  {
+    "run": "aqe_desligado_cache_03",
+    "m2_demand": 684,
+    "m3_zone_month": 239,
+    "o2_route_month": 200,
+    "o2_q1_q3_reversal": 200
+  }
+]

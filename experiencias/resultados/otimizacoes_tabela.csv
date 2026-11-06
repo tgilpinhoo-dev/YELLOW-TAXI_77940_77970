@@ -1,0 +1,5 @@
+Experiência,Comparação,Alternativa (s),Escolha (s),Redução (%)
+Cache,Sem cache → cache,101.269,76.861,24.102
+O1,Janela → groupBy,83.298,76.861,7.728
+Joins das zonas,Sort-merge → broadcast,95.893,76.861,19.847
+AQE,Desligado → ligado,333.595,76.861,76.960

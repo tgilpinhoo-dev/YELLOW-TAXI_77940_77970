@@ -1,0 +1,247 @@
+{
+  "fraction": 0.1,
+  "seed_in_read_trips": 42,
+  "source_files": 24,
+  "sample_raw_rows": 7947434,
+  "sample_valid_rows": 7036182,
+  "full_raw_rows": 79479946,
+  "full_valid_rows": 70353039,
+  "observed_raw_fraction": 0.09999294664845394,
+  "observed_valid_fraction": 0.10001248133716015,
+  "invariants": [
+    {
+      "test": "configuracao igual a 100%: years",
+      "passed": true
+    },
+    {
+      "test": "configuracao igual a 100%: files",
+      "passed": true
+    },
+    {
+      "test": "configuracao igual a 100%: modules",
+      "passed": true
+    },
+    {
+      "test": "configuracao igual a 100%: master",
+      "passed": true
+    },
+    {
+      "test": "configuracao igual a 100%: parallelism",
+      "passed": true
+    },
+    {
+      "test": "configuracao igual a 100%: spark_version",
+      "passed": true
+    },
+    {
+      "test": "configuracao igual a 100%: cache",
+      "passed": true
+    },
+    {
+      "test": "configuracao igual a 100%: broadcast",
+      "passed": true
+    },
+    {
+      "test": "configuracao igual a 100%: aqe",
+      "passed": true
+    },
+    {
+      "test": "configuracao igual a 100%: o1_method",
+      "passed": true
+    },
+    {
+      "test": "configuracao igual a 100%: shuffle_partitions",
+      "passed": true
+    },
+    {
+      "test": "configuracao igual a 100%: executor_memory",
+      "passed": true
+    },
+    {
+      "test": "fracao pedida 10%",
+      "passed": true
+    },
+    {
+      "test": "M1 anos 2023 e 2024",
+      "passed": true
+    },
+    {
+      "test": "M1 mantidas igual a clean.count",
+      "passed": true
+    },
+    {
+      "test": "M1 total menos invalidas igual a mantidas",
+      "passed": true
+    },
+    {
+      "test": "M2 soma das viagens",
+      "passed": true
+    },
+    {
+      "test": "M3 grelha completa",
+      "passed": true
+    },
+    {
+      "test": "M3 soma das viagens",
+      "passed": true
+    },
+    {
+      "test": "O1 soma das viagens",
+      "passed": true
+    },
+    {
+      "test": "O1 contagens e taxas validas",
+      "passed": true
+    },
+    {
+      "test": "O2 soma das viagens",
+      "passed": true
+    },
+    {
+      "test": "O2 shares validas",
+      "passed": true
+    },
+    {
+      "test": "O2 top e anos com inversao",
+      "passed": true
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison": "repeticao 2 vs 1",
+      "table": "m1_cleaning_stats.csv",
+      "rows": 2,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "repeticao 2 vs 1",
+      "table": "m2_demand",
+      "rows": 877,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "repeticao 2 vs 1",
+      "table": "m3_zone_month",
+      "rows": 6312,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "repeticao 2 vs 1",
+      "table": "o1_anomaly_rates.csv",
+      "rows": 45,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "repeticao 2 vs 1",
+      "table": "o2_route_month",
+      "rows": 238978,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "repeticao 2 vs 1",
+      "table": "o2_q1_q3_reversal",
+      "rows": 50285,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "repeticao 2 vs 1",
+      "table": "o2_top_routes.csv",
+      "rows": 120,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "repeticao 3 vs 1",
+      "table": "m1_cleaning_stats.csv",
+      "rows": 2,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "repeticao 3 vs 1",
+      "table": "m2_demand",
+      "rows": 877,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "repeticao 3 vs 1",
+      "table": "m3_zone_month",
+      "rows": 6312,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "repeticao 3 vs 1",
+      "table": "o1_anomaly_rates.csv",
+      "rows": 45,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "repeticao 3 vs 1",
+      "table": "o2_route_month",
+      "rows": 238978,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "repeticao 3 vs 1",
+      "table": "o2_q1_q3_reversal",
+      "rows": 50285,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "repeticao 3 vs 1",
+      "table": "o2_top_routes.csv",
+      "rows": 120,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "vs validacao anterior a 10%",
+      "table": "m2_demand",
+      "rows": 877,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "vs validacao anterior a 10%",
+      "table": "m3_zone_month",
+      "rows": 6312,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "vs validacao anterior a 10%",
+      "table": "o2_route_month",
+      "rows": 238978,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "vs validacao anterior a 10%",
+      "table": "o2_q1_q3_reversal",
+      "rows": 50285,
+      "differences": 0,
+      "max_float_difference": 0.0
+    },
+    {
+      "comparison": "vs validacao anterior a 10%",
+      "table": "o2_top_routes.csv",
+      "rows": 120,
+      "differences": 0,
+      "max_float_difference": 0.0
+    }
+  ],
+  "legacy_validation_available": true,
+  "float_atol": 1e-09,
+  "float_rtol": 1e-12
+}

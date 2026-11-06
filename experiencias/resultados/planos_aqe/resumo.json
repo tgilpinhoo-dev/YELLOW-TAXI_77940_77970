@@ -1,0 +1,36 @@
+{
+  "scope": "inspecao separada: clean materializada uma vez; M2 collect e plano final; nao e benchmark",
+  "files": 24,
+  "fraction": 1.0,
+  "clean_rows": 70353039,
+  "spark_version": "4.2.0",
+  "application_id": "app-20261106131148-0017",
+  "settings": {
+    "spark.sql.adaptive.enabled": "true",
+    "spark.sql.adaptive.coalescePartitions.enabled": "true",
+    "spark.sql.adaptive.skewJoin.enabled": "true",
+    "spark.sql.adaptive.localShuffleReader.enabled": "true",
+    "spark.sql.shuffle.partitions": "200"
+  },
+  "plans": [
+    {
+      "aqe": true,
+      "rows": 995,
+      "file": "m2_aqe_ligado.txt",
+      "operators": [
+        "AdaptiveSparkPlan (148)",
+        "+- AQEShuffleRead (136), coalesced",
+        "(136) AQEShuffleRead",
+        "Arguments: coalesced",
+        "(148) AdaptiveSparkPlan",
+        "Arguments: isFinalPlan=true"
+      ]
+    },
+    {
+      "aqe": false,
+      "rows": 995,
+      "file": "m2_aqe_desligado.txt",
+      "operators": []
+    }
+  ]
+}
