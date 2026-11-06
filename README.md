@@ -125,7 +125,7 @@ num segundo PC, sem Docker: Windows 11, 16 threads, `local[*]`, Spark 4.2.0
 (PySpark num venv com Python 3.12), Java 17 e `winutils.exe`/`hadoop.dll` do
 Hadoop 3.4 em `C:\hadoop\bin` (variável `HADOOP_HOME`). Amostra de 10%, uma ou
 duas corridas por configuração. Os `run_info.json` de cada corrida estão em
-`experiencias/resultados_local/`. Estas corridas usaram a versão do
+`resultados_local/`. Estas corridas usaram a versão do
 `projeto1.py` anterior às correções de arredondamento e à medição com o
 profiler; o tempo total é a soma dos blocos medidos.
 
